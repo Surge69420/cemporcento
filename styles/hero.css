@@ -1,5 +1,8 @@
 .Banner {
     height: 50vh;
     width: 100vw;
-    background-color: red;
+    background-image: url("../imgs/Banner.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 10rem;
 }
