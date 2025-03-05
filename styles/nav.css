@@ -1,43 +1,189 @@
 body {
-    background-color: purple;
     padding: 0;
     margin: 0;
+    font-family: "Gabarito";
+    font-weight: 400;
 }
 
 nav {
+    background-color: white;
+    z-index: 99;
+}
+.topBar {
+    align-items: center;
+    height: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+nav .container-lg .topBar, nav .container-lg .bottomBar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 1rem;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+nav {
+
     width: 100%;
     margin: 0;
     top: 0;
     position: fixed;
-    z-index: 1;
 }
-
+.Scrolled .container-lg .topBar {
+    height: 0;
+    overflow: hidden;
+}
 nav .curve {
-    height: 20vh;
-    width: 100vw;
+    width: 100%;
+    aspect-ratio: 1918 / 83;
     position: absolute;
-    top: 0;
+    top: calc(100%) !important;
     color: white;
-    z-index: -1;
-    filter: invert(1) drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));;
+
+    filter:drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
+    object-fit: cover;
+    object-position: center;
+    display: none;
 }
-nav ul {
+nav::before {
+    content: '';
+    width: 100%;
+    aspect-ratio: 1918 / 83;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(100%);
+    mask-repeat: no-repeat;
+    z-index: 0;
+    transition: all .2sease-in-out;
+    background: url(../imgs/header.png);
+    filter:drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
+    background-position: top;
+    background-size: cover;
+}
+nav .container-lg .bottomBar ul, nav .topBar ul {
     display: flex;
     list-style: none;
-    gap: 1rem
+    gap: 1rem;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    font-size: 0.8rem;
 }
 
-nav img {
-    height: 10rem;
-    width: 10rem;
+nav .container-lg .bottomBar .logo {
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    margin-top: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 0.3s ease-in-out;
 }
-
-nav ul img {
-    margin: 0 2rem;
+.Scrolled .container-lg .bottomBar .logo {
+    height: 8vw;
+    width: 8vw;
+}
+nav .container-lg .bottomBar ul img {
+    
+    padding: 0;
     height: 3rem;
     width: 3rem;
+}
+.Text-Wrapper {
+
+    font-size: 1rem;
+    margin-top: 0;
+    color: var(--green);
+    display: flex;
+    flex-wrap: nowrap;
+}
+.TextloopContainer {
+    display: flex;
+    white-space: nowrap;
+    width: 50%;
+    overflow: hidden;
+    gap: 1rem;
+}
+.btn {
+    background-color: #eea021 !important;
+    border-radius: 1rem !important;
+    color: white !important;
+    padding: 0.5rem 2rem !important;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+.btn p {
+    margin: 0 !important;
+}
+.loopingText {
+    animation: TextLoop 10s infinite linear;
+}
+
+@keyframes TextLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.leaf2 {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    left: 70%;
+    transform: translate(-90%,-70%);
+    top: 90%;
+    background-image: url(../imgs/leaf2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: 0 !important;
+    transition: all 0.3s ease-in-out;
+    animation: LeafAnim 5s infinite ease-in-out;
+}
+.Scrolled .leaf2 {
+    left: 70%;
+    transform: translateY(-80%,-70%);
+    top: -80%;
+
+}
+
+.leaf1 {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    left: 30%;
+    transform: translate(-90%,-30%);
+    top: 90%;
+    background-image: url(../imgs/leaf1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: 0 !important;
+    transition: all 0.3s ease-in-out;
+    animation: LeafAnim 5s infinite ease-in-out;
+}
+.Scrolled .leaf1 {
+    left: 30%;
+    transform: translateY(-80%,-30%);
+    top: -80%;
+
+}
+
+@keyframes LeafAnim {
+    0% {
+        transform: rotate(5deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(0.4rem);
+    }
+    100% 
+    {
+        transform: rotate(5deg) translateY(0);
+    }
 }

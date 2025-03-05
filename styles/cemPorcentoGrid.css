@@ -1,0 +1,42 @@
+.cemPorcentoGrid {
+    display: grid;
+    height: 40vh;
+    width: 100%;
+    grid-template-columns: 1fr 0.6fr 1fr 1fr 0.6fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+    color: white;
+}
+
+.cemPorcentoGrid div {
+    background-position: center;
+    background-size: cover;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cemPorcentoGrid div div {
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+    display: flex;
+    opacity: 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 1.45rem;
+    line-height: 1.1;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.cemPorcentoGrid div:hover div {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}

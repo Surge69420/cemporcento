@@ -1,17 +1,187 @@
+:root {
+    --green: #86b049;
+    --bright-green: #c5e90b;
+    --gray: #4a4a4a;
+    --yellow: #eea021;
+}
+
 body {
     overflow-x: hidden;
 }
-.Slider {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 3rem 0;
-    margin: 0;
+
+p {
+    margin-bottom: 0;
 }
-.Slider .item {
+
+.item {
     height: 10vh;
-    width: 20vw;
-    background-color: blue;
+
+    background-image: url("../imgs/29fc0df9.jpg");
+    background-size: 100%;
+    background-position: center;
     border-radius: 1rem;
     margin: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-size: 120%;
+}
+
+.CircleText {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    animation: circleText 10s linear infinite;
+
+}
+
+.CircleTextWrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 0;
+}
+
+.CircleTextWrapper:last-child::after {
+    content: '';
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.219);
+
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    cursor: pointer;
+}
+
+.CircleTextWrapper:hover:last-child::after {
+    opacity: 1;
+}
+
+.CircleTextWrapper div span {
+    font-size: 2.5rem;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    border-color: rgba(0, 0, 0, 0.219);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329);
+}
+
+.card-body {
+    padding: 2rem;
+    color: var(--gray);
+}
+
+.card-title {
+    font-family: "Sora", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    font-family: "Sora", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.familia {
+    position: relative;
+    margin: 8rem 0rem !important;
+    margin-top: 10rem !important;
+}
+
+.familia h1 {
+    color: var(--green);
+    margin: 0;
+    font-family: 'Bentho', sans-serif;
+    margin-bottom: -1rem;
+    text-align: center;
+    font-size: 4rem;
+    margin: 3rem;
+}
+
+.leafFamiliaTop {
+    height: 7rem;
+    width: 7rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../imgs/leafFamiliaTop.png);
+    position: absolute;
+    top: -140%;
+    left: 30%;
+    animation: LeafAnim 5s ease-in-out infinite;
+}
+.FamiliaImgs {
+    aspect-ratio: 1 / 1;  
+    background-size: cover;
+    background-position: center;
+}
+.leafFamiliaBottom {
+    height: 7rem;
+    width: 7rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../imgs/leafFamiliaBottom.png);
+    position: absolute;
+    top: 100%;
+    right: 30%;
+    animation: LeafAnim 5s ease-in-out infinite;
+}
+.slick-dots li {
+    height: fit-content;
+    width: fit-content;
+}
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 0.2rem;
+    margin-top: 2rem;
+}
+.dot {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--bright-green);
+    transition: all 0.3s ease-in-out;
+}
+.slick-active {
+    width: fit-content;
+}
+.slick-active .dot {
+    background-color: var(--green);
+    width: 30px;
+    border-radius: 2rem;
+}
+
+@keyframes circleText {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(179.9deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }

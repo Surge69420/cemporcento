@@ -1,0 +1,58 @@
+.footerLink {
+    text-decoration: none;
+    color: var(--green);
+}
+.footer {
+    margin: 15rem 0 3rem 0 ;
+    position: relative;
+}
+.pagamentos {
+    background-image: url(../imgs/pagamentos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 250 / 30;
+    width: 100%;
+}
+.ignoramus {
+    background-image: url(../imgs/ignoramus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 250 / 78;
+    width: 100%;
+}
+.Footerleaf1 {
+    position: absolute;
+    height: 7rem;
+    width: 7rem;
+    left: 25%;
+    transform: translate(90%,-25%);
+    top: -90%;
+    background-image: url(../imgs/leaf2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: 0 !important;
+    transition: all 0.3s ease-in-out;
+    animation: LeafAnim 5s infinite ease-in-out;
+}
+
+.Footerleaf2 {
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    right: 20%;
+    transform: translate(90%,20%);
+    top: -90%;
+    background-image: url(../imgs/leaf1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: 0 !important;
+    transition: all 0.3s ease-in-out;
+    animation: LeafAnim 5s infinite ease-in-out;
+    animation-delay: 0.3s;
+}
