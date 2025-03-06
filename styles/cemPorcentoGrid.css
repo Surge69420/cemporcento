@@ -1,3 +1,22 @@
+.CemPorcentoTitle {
+    font-size: 8.7rem;
+    font-weight: 900;
+    background-image: url(../imgs/Cemporcento-green-leaf.jpg);
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    background-position: top;
+}
+.CemPorcentoDesc {
+    color: var(--dark-green);
+    text-align: center;
+}
+.CemPorcentoAuthor {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.5rem;
+    margin: 1rem 0;
+}
 .cemPorcentoGrid {
     display: grid;
     height: 40vh;
@@ -17,6 +36,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .cemPorcentoGrid div div {
     width: 0;
     height: 0;
@@ -39,4 +59,44 @@
     height: 100%;
     width: 100%;
     opacity: 1;
+}
+.CemPorcento {
+    margin-top: 10rem;
+}
+.cemPorcentoSliderItem {
+    aspect-ratio: 343 / 274.39;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    background-position: center;
+    background-size: cover;
+}
+.cemPorcentoSliderItemWrapper {
+    padding: 0 0.3rem;
+}
+.cemPorcentoSliderItemWrapper p {
+    margin-top: 1rem;
+}
+@media (max-width: 1200px)
+{
+    .CemPorcentoTitle {
+        font-size: 6rem;
+    }
+}
+@media (max-width: 992px)
+{
+    .CemPorcentoTitle 
+    {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 762px) {
+    .CemPorcentoTitle {
+        font-size: 4rem;
+    }
+}
+@media (max-width: 576px)
+{
+    .CemPorcentoTitle {
+        font-size: 3rem;
+    }
 }

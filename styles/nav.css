@@ -5,22 +5,62 @@ body {
     font-weight: 400;
 }
 
+#MenuBar {
+    left: -120%;
+    transition: all 0.3s ease-in-out;
+    height: 90vh;
+    width: 100vw;
+    position:
+        fixed;
+    z-index: 1;
+    top: 0;
+    background-color: white;
+}
+
+.menuDiv {
+    background-color: var(--green) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 1rem
+}
+.DisplayToggler {
+    cursor: pointer;
+    transform: all 0.3s ease-in-out;
+}
+.DisplayToggler:hover {
+    color: black;
+}
+#MenuBar.active {
+    left: 0;
+}
+
+#MenuBtn {
+    z-index: 0;
+}
+
 nav {
     background-color: white;
     z-index: 99;
 }
+
 .topBar {
     align-items: center;
     height: 3rem;
     transition: all 0.3s ease-in-out;
 }
-nav .container-lg .topBar, nav .container-lg .bottomBar {
+
+nav .container-lg .topBar,
+nav .container-lg .bottomBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     margin-bottom: 1rem;
 }
+
 nav {
 
     width: 100%;
@@ -28,10 +68,12 @@ nav {
     top: 0;
     position: fixed;
 }
+
 .Scrolled .container-lg .topBar {
     height: 0;
     overflow: hidden;
 }
+
 nav .curve {
     width: 100%;
     aspect-ratio: 1918 / 83;
@@ -39,11 +81,12 @@ nav .curve {
     top: calc(100%) !important;
     color: white;
 
-    filter:drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.3));
     object-fit: cover;
     object-position: center;
     display: none;
 }
+
 nav::before {
     content: '';
     width: 100%;
@@ -56,11 +99,13 @@ nav::before {
     z-index: 0;
     transition: all .2sease-in-out;
     background: url(../imgs/header.png);
-    filter:drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
     background-position: top;
     background-size: cover;
 }
-nav .container-lg .bottomBar ul, nav .topBar ul {
+
+nav .container-lg .bottomBar ul,
+nav .topBar ul {
     display: flex;
     list-style: none;
     gap: 1rem;
@@ -78,17 +123,21 @@ nav .container-lg .bottomBar .logo {
     left: 50%;
     transform: translate(-50%);
     transition: all 0.3s ease-in-out;
+    z-index: 1;
 }
+
 .Scrolled .container-lg .bottomBar .logo {
     height: 8vw;
     width: 8vw;
 }
+
 nav .container-lg .bottomBar ul img {
-    
+
     padding: 0;
     height: 3rem;
     width: 3rem;
 }
+
 .Text-Wrapper {
 
     font-size: 1rem;
@@ -97,6 +146,7 @@ nav .container-lg .bottomBar ul img {
     display: flex;
     flex-wrap: nowrap;
 }
+
 .TextloopContainer {
     display: flex;
     white-space: nowrap;
@@ -104,6 +154,7 @@ nav .container-lg .bottomBar ul img {
     overflow: hidden;
     gap: 1rem;
 }
+
 .btn {
     background-color: #eea021 !important;
     border-radius: 1rem !important;
@@ -113,9 +164,11 @@ nav .container-lg .bottomBar ul img {
     flex-direction: row;
     gap: 0.2rem;
 }
+
 .btn p {
     margin: 0 !important;
 }
+
 .loopingText {
     animation: TextLoop 10s infinite linear;
 }
@@ -129,12 +182,13 @@ nav .container-lg .bottomBar ul img {
         transform: translateX(-100%);
     }
 }
+
 .leaf2 {
     position: absolute;
     height: 5rem;
     width: 5rem;
     left: 70%;
-    transform: translate(-90%,-70%);
+    transform: translate(-90%, -70%);
     top: 90%;
     background-image: url(../imgs/leaf2.png);
     background-size: contain;
@@ -145,9 +199,10 @@ nav .container-lg .bottomBar ul img {
     transition: all 0.3s ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
 }
+
 .Scrolled .leaf2 {
     left: 70%;
-    transform: translateY(-80%,-70%);
+    transform: translateY(-80%, -70%);
     top: -80%;
 
 }
@@ -157,7 +212,7 @@ nav .container-lg .bottomBar ul img {
     height: 5rem;
     width: 5rem;
     left: 30%;
-    transform: translate(-90%,-30%);
+    transform: translate(-90%, -30%);
     top: 90%;
     background-image: url(../imgs/leaf1.png);
     background-size: contain;
@@ -168,9 +223,10 @@ nav .container-lg .bottomBar ul img {
     transition: all 0.3s ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
 }
+
 .Scrolled .leaf1 {
     left: 30%;
-    transform: translateY(-80%,-30%);
+    transform: translateY(-80%, -30%);
     top: -80%;
 
 }
@@ -179,11 +235,12 @@ nav .container-lg .bottomBar ul img {
     0% {
         transform: rotate(5deg) translateY(0);
     }
+
     50% {
         transform: rotate(-5deg) translateY(0.4rem);
     }
-    100% 
-    {
+
+    100% {
         transform: rotate(5deg) translateY(0);
     }
 }

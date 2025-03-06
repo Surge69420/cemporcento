@@ -1,8 +1,14 @@
 .Banner {
-    height: 50vh;
+    height: 80vw;
+    max-height: 700px;
     width: 100vw;
     background-image: url("../imgs/Banner.jpg");
     background-size: cover;
-    background-position: center;
-    margin-top: 10rem;
+    background-position: top;
+    margin-top: 8rem;
+}
+@media (max-width:992px) {
+    .Banner {
+        background-image: url("../imgs/d06403d9.jpg");
+    }
 }

@@ -1,0 +1,43 @@
+.productpics {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.productpic {
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.342);
+}
+.productBanner {
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.productDetails {
+
+}
+
+.productContentList {
+    list-style: none;
+    padding: 0;
+}
+.productContentList li {
+    position: relative;
+    padding-left: 2rem;
+}
+.productContentList li::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../imgs/Green_tick.svg.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100% !important;
+    aspect-ratio: 1 / 1;
+    left: 0;
+}

@@ -1,0 +1,9 @@
+.categoryFlex {
+    font-size: 0.8rem !important;
+}
+.categoryFlex div div button{
+    font-size: 0.8rem !important;
+}
+.categoryFlex div p {
+    letter-spacing: 0.1rem;
+}

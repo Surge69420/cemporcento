@@ -56,3 +56,15 @@
     animation: LeafAnim 5s infinite ease-in-out;
     animation-delay: 0.3s;
 }
+@media (max-width:1200px) {
+    .Footerleaf1 {
+        left: 25%;
+        transform: translate(40%,-25%);
+        top: -40%;
+    }
+    .Footerleaf2 {
+        right: 20%;
+        transform: translate(40%,20%);
+        top: -40%;
+    }
+}

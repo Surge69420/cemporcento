@@ -3,10 +3,13 @@
     --bright-green: #c5e90b;
     --gray: #4a4a4a;
     --yellow: #eea021;
+    --dark-green: #26580f;
+    --purple: #e2369a;
 }
 
 body {
     overflow-x: hidden;
+
 }
 
 p {
@@ -49,7 +52,6 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
-    z-index: 0;
 }
 
 .CircleTextWrapper:last-child::after {
@@ -77,13 +79,16 @@ p {
     border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 1rem;
 }
 
 .card:hover {
     border-color: rgba(0, 0, 0, 0.219);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329);
 }
-
+.card:hover .card-body .card-title {
+    color:#111
+}
 .card-body {
     padding: 2rem;
     color: var(--gray);
@@ -149,11 +154,12 @@ p {
 .slick-dots li {
     height: fit-content;
     width: fit-content;
+    margin: 0;
 }
 .slick-dots {
     display: flex !important;
     justify-content: center;
-    gap: 0.2rem;
+    gap: 0.4rem;
     margin-top: 2rem;
 }
 .dot {
@@ -185,3 +191,65 @@ p {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+@media (max-width: 1200px) {
+    .leafFamiliaTop {
+        height: 6rem;
+        width: 6rem;
+    }
+    .leafFamiliaBottom {
+        height: 6rem;
+        width: 6rem;
+    }
+    .familia h1 {
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 992px) {
+    .leafFamiliaTop {
+        height: 5rem;
+        width: 5rem;
+    }
+    .leafFamiliaBottom {
+        height: 5rem;
+        width: 5rem;
+    }
+    .familia h1 {
+        font-size: 3rem;
+    }
+    .card-body .badgeP {
+        font-size: 0.45rem;
+    }
+}
+@media (max-width: 762px) {
+    .leafFamiliaTop {
+        height: 4rem;
+        width: 4rem;
+    }
+    .leafFamiliaBottom {
+        height: 4rem;
+        width: 4rem;
+    }
+    .familia h1 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 576px)
+ {
+    .card-body .badgeP {
+        font-size: 0.4rem;
+        letter-spacing: 0.1rem !important;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .card-text {
+        display: none;
+    }
+    .card-body {
+        padding: 1rem 0rem;
+    }
+    .card:hover {
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+ }
