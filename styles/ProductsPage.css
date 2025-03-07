@@ -38,7 +38,11 @@
     color: black;
     font-size: 0.8rem;
 }
-
+.form-check-input {
+    height: 1.5rem ;
+    width: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, .35);
+}
 @media (max-width: 576px) {
     .ProductsContainer {
         margin-top: 7rem;

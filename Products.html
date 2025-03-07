@@ -392,9 +392,9 @@
         </div>
     </div>
     <div class="container-lg ProductsContainer">
-        <div class="d-none d-lg-flex align-items-center justify-content-center categoryFlex my-5">
+        <div class="d-none d-md-flex align-items-center justify-content-center categoryFlex my-5">
             <div class="d-flex align-items-center justify-content-center">
-                <p>Categoria</p>
+                <p class="d-none d-lg-block" >Categoria</p>
                 <div class="dropdown">
 
                     <button
@@ -412,7 +412,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <p>Ordenar</p>
+                <p class="d-none d-lg-block">Ordenar</p>
                 <div class="dropdown">
                     <button
                         style="display: inline-block; border: 0; background-color: transparent !important; color: black !important;"
@@ -429,7 +429,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <p>filtros</p>
+                <p class="d-none d-lg-block">filtros</p>
                 <div class="dropdown">
                     <button
                         style="display: inline-block; border: 0; background-color: transparent !important; color: black !important;"
@@ -446,7 +446,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <p>Marças</p>
+                <p class="d-none d-lg-block">Marças</p>
                 <div class="dropdown">
                     <button
                         style="display: inline-block; border: 0; background-color: transparent !important; color: black !important;"
@@ -463,7 +463,7 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center">
-                <p>Preço</p>
+                <p class="d-none d-lg-block">Preço</p>
 
                 <div class="dropdown">
                     <button
@@ -485,11 +485,13 @@
             <h2 style="font-size:1.2rem;">Alimentação Saudável</h2>
             <h1 style="font-weight: bold; color: var(--green); ">Especial Crianças</h1>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">Toggle right offcanvas</button>
+        <div class="d-flex justify-content-end align-items-center">
+            <button class="btn btn-primary d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight" style="background-color: transparent !important; border: none !important; color:black !important;">Filtrar <span class="material-symbols-rounded">
+                    tune
+                    </span></button>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+            <div class="offcanvas offcanvas-end d-block d-md-none" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
                 style="width: 100%; z-index: 3; margin-top: 7rem;">
 
                 <div class="offcanvas-body" style="padding: 0;">
@@ -543,17 +545,87 @@
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
-                        <p class="ProductsPageRedirect">Nutrição Desportiva</p>
-                        <p class="DisplayToggler form-check" data-target="Saudável">Alimentação Saudável
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                         </p>
-                        <p class="DisplayToggler" data-target="Glúten">Alimentação Sem Glúten <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></p>
-                        <p class="DisplayToggler" data-target="Infusões">Chás e Infusões <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></p>
-                        <p class="DisplayToggler" data-target="Alimentares">Suplementos Alimentares <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></p>
-                        <p class="DisplayToggler" data-target="Natural">Cosmética Natural <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></p>
-                        <p class="ProductsPageRedirect">Desinfetantes</p>
-                        <p class="ProductsPageRedirect">Livros</p>
-                        <p class="ProductsPageRedirect">Ver todos</p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="Category d-flex justify-content-between flex-column gap-1" style="padding: 1rem;">
+                        <div class="d-flex justify-content-between flex-row w-100">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Categorias</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+
+                    </div>
+                    <hr>
+                    <div class="Category d-flex justify-content-between flex-column gap-1" style="padding: 1rem;">
+                        <div class="d-flex justify-content-between flex-row w-100">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Categorias</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
+                        <p class="d-flex align-items-center justify-content-between" data-target="Glúten"> <label
+                                class="form-check-label" for="flexRadioDefault1"> Alimentação Sem Glúten </label> <input
+                                class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        </p>
                     </div>
                 </div>
             </div>
