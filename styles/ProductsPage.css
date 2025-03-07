@@ -1,9 +1,54 @@
 .categoryFlex {
     font-size: 0.8rem !important;
 }
-.categoryFlex div div button{
+
+.categoryFlex div div button {
     font-size: 0.8rem !important;
 }
+
 .categoryFlex div p {
     letter-spacing: 0.1rem;
+}
+
+.PageIndicator {
+    border-radius: 50%;
+    width: 5vw;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--bright-green);
+    color: var(--bright-green);
+    cursor: pointer;
+}
+.PageIndicator:hover {
+    background-color: var(--bright-green);
+    color: white;
+}
+.cemPorcentoProductsPage{
+    font-size: 6.5rem;
+}
+.ProductsContainer {
+    margin-top: 13rem;
+}
+.offcanvas-backdrop {
+    display: none;
+}
+.Category {
+    color: var(--green);
+}
+.Category p, .Category p span {
+    color: black;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+    .ProductsContainer {
+        margin-top: 7rem;
+    }
+    .cemPorcentoProductsPage {
+        font-size: 3rem;
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+    .CircleTextWrapper div span {
+        font-size: 1rem;
+    }
 }

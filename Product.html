@@ -16,10 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/bentho" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios,shopping_cart" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <script defer src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -34,7 +31,9 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navBar">
+        <div class="d-lg-block d-none leaf2"></div>
+        <div class="d-lg-block d-none leaf1"></div>
         <div class="container-lg">
             <div class="topBar">
                 <div class="Text-Wrapper TextloopContainer">
@@ -84,7 +83,7 @@
                         sua encomenda até às 17h e receba no dia útil seguinte (Portugal Continental)
                     </span>
                 </div>
-                <div>
+                <div class="d-none d-xl-block">
                     <ul>
                         <li>Ajuda apoio ao cliente</li>
                         <li>Login/Conta</li>
@@ -94,41 +93,305 @@
                 </div>
             </div>
             <div class="bottomBar">
-                <ul>
-                    <img src="./__Icons/menu(5).png" alt="">
-                    <li>Alimentação</li>
-                    <li>Suplementos</li>
-                    <li>Cosmética</li>
-                    <li>Nutrição Desportiva</li>
-                </ul>
+                <div style="display: flex;">
+                    <div id="MenuBtn"><img src="./__Icons/menu(5).png" alt=""> </div>
+                    <ul class="d-none d-xl-flex">
+                        <li>
+
+                        </li>
+                        <li>Alimentação</li>
+                        <li>Suplementos</li>
+                        <li>Cosmética</li>
+                        <li>Nutrição Desportiva</li>
+                    </ul>
+                    <ul class="d-flex d-xl-none align-items-center gap-3 mx-3">
+                        <span class="material-symbols-rounded navIcon">
+                            support_agent
+                        </span>
+                        <span class="material-symbols-rounded navIcon">
+                            person
+                        </span>
+
+                    </ul>
+                </div>
                 <img class="ml-auto logo" src="imgs/logo.png" alt="">
-                <ul>
-                    <li style="color: red;">Sim verao</li>
-                    <li>Novas Marinheiras</li>
-                    <li>
-                        <span class="material-symbols-outlined">
+                <div class="d-flex">
+                    <ul class="d-none d-xl-flex">
+                        <li style="color: red;">Sim verao</li>
+                        <li>Novas Marinheiras</li>
+                        <li>
+                            <span style="font-size: 1.5rem;">
+                                %
+                            </span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-rounded navIcon">
+                                search
+                            </span>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                    <ul class="d-flex d-xl-none align-items-center">
+                        <span style="font-size: 1.5rem;">
                             %
                         </span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-rounded navIcon">
                             search
                         </span>
-                    </li>
-                    <li>
-                        <div class="btn">
-                            <span class="material-symbols-rounded">
-                                shopping_cart
-                            </span>
-                            <p>Carinho</p>
-                        </div>
-                    </li>
-                </ul>
+                        <span class="material-symbols-rounded navIcon">
+                            shopping_cart
+                        </span>
+                    </ul>
+                    <div class="btn d-none d-xl-flex">
+                        <span class="material-symbols-rounded navIcon">
+                            shopping_cart
+                        </span>
+                        <p>Carinho</p>
+                    </div>
+                </div>
             </div>
 
         </div>
         <img class="curve" src="imgs/header.png">
+
     </nav>
+    <div id="MenuBar">
+        <div class="row h-100">
+            <div class="menuDiv col-md-4  h-100 " style="background-color: green;">
+                <div style="line-height: 2.5;">
+                    <p class="ProductsPageRedirect">Nutrição Desportiva</p>
+                    <p class="DisplayToggler" data-target="Saudável">Alimentação Saudável<span
+                            class="material-symbols-rounded">arrow_forward_ios</span></p>
+                    <p class="DisplayToggler" data-target="Glúten">Alimentação Sem Glúten <span
+                            class="material-symbols-rounded">arrow_forward_ios</span></p>
+                    <p class="DisplayToggler" data-target="Infusões">Chás e Infusões <span
+                            class="material-symbols-rounded">arrow_forward_ios</span></p>
+                    <p class="DisplayToggler" data-target="Alimentares">Suplementos Alimentares <span
+                            class="material-symbols-rounded">arrow_forward_ios</span></p>
+                    <p class="DisplayToggler" data-target="Natural">Cosmética Natural <span
+                            class="material-symbols-rounded">arrow_forward_ios</span></p>
+                    <p class="ProductsPageRedirect">Desinfetantes</p>
+                    <p class="ProductsPageRedirect">Livros</p>
+                    <p class="ProductsPageRedirect">Ver todos</p>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="Toggleable" data-id="Saudável" style="width: 100%; height: 100%;">
+                    <div class="d-flex d-block d-md-none flex-column gap-2" style="padding-left: 1.5rem;">
+                        <nav aria-label="breadcrumb DisplayToggler" data-target="Saudável"
+                            style="color: black; margin: 0 !important;">
+                            <ol class="breadcrumb" start="margin: 0">
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Saudável"
+                                        style="color: var(--green) !important; width: fit-content;">voltar</a></li>
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Saudável"
+                                        style="color: var(--green) !important; width: fit-content;">Alimentação
+                                        Saudável</a></li>
+                            </ol>
+                        </nav>
+                        <p class="ProductsPageRedirect">Pequenos-almoços e Sementes</p>
+                        <p class="ProductsPageRedirect">Bolachas e Biscoitos</p>
+                        <p class="ProductsPageRedirect">Snacks e Barras</p>
+                        <p class="ProductsPageRedirect">Especial Crianças</p>
+                        <p class="ProductsPageRedirect">Pão e Tostas</p>
+                        <p class="ProductsPageRedirect">Doces e Compotas</p>
+                        <p class="ProductsPageRedirect">Sobremesas</p>
+                        <p class="ProductsPageRedirect">Chocolates e Adoçantes</p>
+                        <p class="ProductsPageRedirect">Sumos e Bebidas Vegetais</p>
+                        <p class="ProductsPageRedirect">Pronto-a-comer e temperos</p>
+                        <p class="ProductsPageRedirect">Cereais e Leguminosas</p>
+                        <p class="ProductsPageRedirect">Flocos e Farinhas</p>
+                        <p class="ProductsPageRedirect">Formato Económico</p>
+                        <p class="ProductsPageRedirect">Profissional</p>
+                    </div>
+                    <div class="row d-none d-md-flex" style="padding-left: 2rem; height: 100%; align-items: center;">
+                        <div class="col-lg-6 col-md-10">
+                            <div class="row" style="align-content: start;">
+                                <div class="col-6 menuTextDiv">
+                                    <p class="ProductsPageRedirect">Pequenos-almoços e Sementes</p>
+                                    <p class="ProductsPageRedirect">Bolachas e Biscoitos</p>
+                                    <p class="ProductsPageRedirect">Snacks e Barras</p>
+                                    <p class="ProductsPageRedirect">Especial Crianças</p>
+                                    <p class="ProductsPageRedirect">Pão e Tostas</p>
+                                    <p class="ProductsPageRedirect">Doces e Compotas</p>
+                                    <p class="ProductsPageRedirect">Sobremesas</p>
+                                    <p class="ProductsPageRedirect">Chocolates e Adoçantes</p>
+                                    <p class="ProductsPageRedirect">Sumos e Bebidas Vegetais</p>
+                                    <p class="ProductsPageRedirect">Pronto-a-comer e temperos</p>
+                                </div>
+                                <div class="col-6  menuTextDiv">
+                                    <p>Cereais e Leguminosas</p>
+                                    <p>Flocos e Farinhas</p>
+                                    <p>Formato Económico</p>
+                                    <p>Profissional</p>
+                                    <p style="color: var(--yellow);">Ver todos</p>
+                                    <p style="color: var(--yellow);">Produtos em promoção</p>
+                                    <p style="color: var(--yellow);">Novidades</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Toggleable" data-id="Glúten" style="width: 100%; height: 100%;">
+                    <div class="d-flex d-block d-md-none flex-column gap-2" style="padding-left: 1.5rem;">
+                        <nav aria-label="breadcrumb DisplayToggler" data-target="Glúten"
+                            style="color: black; margin: 0 !important;">
+                            <ol class="breadcrumb" start="margin: 0">
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Glúten"
+                                        style="color: var(--green) !important; width: fit-content;">voltar</a></li>
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Glúten"
+                                        style="color: var(--green) !important; width: fit-content;">Alimentação Sem
+                                        Glúten</a></li>
+                            </ol>
+                        </nav>
+                        <p class="ProductsPageRedirect">Pequenos-almoços e Bolachas</p>
+                        <p class="ProductsPageRedirect">Farinhas, Massas e Pão</p>
+                        <p class="ProductsPageRedirect">Doces e Chocolates</p>
+                    </div>
+                    <div class="row d-none d-md-flex" style="padding-left: 2rem; height: 100%; align-items: center;">
+                        <div class="row" style="align-content: start;">
+                            <div class="col-6 menuTextDiv">
+                                <p class="ProductsPageRedirect">Pequenos-almoços e Bolachas</p>
+                                <p class="ProductsPageRedirect">Farinhas, Massas e Pão</p>
+                                <p class="ProductsPageRedirect">Doces e Chocolates</p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Ver todos</p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Produtos em promoção
+                                </p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Novidades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Toggleable" data-id="Infusões" style="width: 100%; height: 100%;">
+                    <div class="d-flex d-block d-md-none flex-column gap-2" style="padding-left: 1.5rem;">
+                        <nav aria-label="breadcrumb DisplayToggler" data-target="Infusões"
+                            style="color: black; margin: 0 !important;">
+                            <ol class="breadcrumb" start="margin: 0">
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Infusões"
+                                        style="color: var(--green) !important; width: fit-content;">voltar</a></li>
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Infusões"
+                                        style="color: var(--green) !important; width: fit-content;">Chás e Infusões</a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <p class="ProductsPageRedirect">Infusões Simples</p>
+                        <p class="ProductsPageRedirect">Infusões Funcionais</p>
+                        <p class="ProductsPageRedirect">Infusões Biológicas</p>
+                        <p class="ProductsPageRedirect">Chás Solúveis</p>
+                        <p class="ProductsPageRedirect">Planta Inteira</p>
+                    </div>
+                    <div class="row d-none d-md-flex" style="padding-left: 2rem; height: 100%; align-items: center;">
+                        <div class="col-6">
+                            <div class="row" style="align-content: start;">
+                                <div class="col-6 menuTextDiv">
+                                    <p class="ProductsPageRedirect">Infusões Simples</p>
+                                    <p class="ProductsPageRedirect">Infusões Funcionais</p>
+                                    <p class="ProductsPageRedirect">Infusões Biológicas</p>
+                                    <p class="ProductsPageRedirect">Chás Solúveis</p>
+                                    <p class="ProductsPageRedirect">Planta Inteira</p>
+                                    <p class="ProductsPageRedirect" style="color: var(--yellow);">Ver todos</p>
+                                    <p class="ProductsPageRedirect" style="color: var(--yellow);">Produtos em promoção
+                                    </p>
+                                    <p class="ProductsPageRedirect" style="color: var(--yellow);">Novidades</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Toggleable" data-id="Alimentares" style="width: 100%; height: 100%;">
+                    <div class="d-flex d-block d-md-none flex-column gap-2" style="padding-left: 1.5rem;">
+                        <nav aria-label="breadcrumb DisplayToggler" data-target="Alimentares"
+                            style="color: black; margin: 0 !important;">
+                            <ol class="breadcrumb" start="margin: 0">
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Alimentares"
+                                        style="color: var(--green) !important; width: fit-content;">voltar</a></li>
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Alimentares"
+                                        style="color: var(--green) !important; width: fit-content;">Suplementos
+                                        Alimentares</a></li>
+                            </ol>
+                        </nav>
+                        <p class="ProductsPageRedirect">Emagrecimento e Detox</p>
+                        <p class="ProductsPageRedirect">Digestão e Trato Intestinal</p>
+                        <p class="ProductsPageRedirect">Coração e Circulação</p>
+                        <p class="ProductsPageRedirect">Sono, Stress e Ansiedade</p>
+                        <p class="ProductsPageRedirect">Cérebro e Memória</p>
+                        <p class="ProductsPageRedirect">Sistema Imunitário</p>
+                        <p class="ProductsPageRedirect">Energia e Vitalidade</p>
+                        <p class="ProductsPageRedirect">Ossos e Articulações</p>
+                        <p class="ProductsPageRedirect">Cabelo, Pele e Unhas</p>
+                        <p class="ProductsPageRedirect">Sistema Urinário</p>
+                        <p class="ProductsPageRedirect">Saúde Ocular</p>
+                        <p class="ProductsPageRedirect">Desporto e Performance</p>
+                        <p class="ProductsPageRedirect">Especial Mulher</p>
+                        <p class="ProductsPageRedirect">Especial Homem</p>
+                    </div>
+                    <div class="row d-none d-md-flex" style="padding-left: 2rem; height: 100%; align-items: center;">
+                        <div class="row" style="align-content: start;">
+                            <div class="col-6 menuTextDiv">
+                                <p class="ProductsPageRedirect">Emagrecimento e Detox</p>
+                                <p class="ProductsPageRedirect">Digestão e Trato Intestinal</p>
+                                <p class="ProductsPageRedirect">Coração e Circulação</p>
+                                <p class="ProductsPageRedirect">Sono, Stress e Ansiedade</p>
+                                <p class="ProductsPageRedirect">Cérebro e Memória</p>
+                                <p class="ProductsPageRedirect">Sistema Imunitário</p>
+                                <p class="ProductsPageRedirect">Energia e Vitalidade</p>
+                                <p class="ProductsPageRedirect">Ossos e Articulações</p>
+                                <p class="ProductsPageRedirect">Cabelo, Pele e Unhas</p>
+                                <p class="ProductsPageRedirect">Sistema Urinário</p>
+                            </div>
+                            <div class="col-6  menuTextDiv">
+                                <p class="ProductsPageRedirect">Saúde Ocular</p>
+                                <p class="ProductsPageRedirect">Desporto e Performance</p>
+                                <p class="ProductsPageRedirect">Especial Mulher</p>
+                                <p class="ProductsPageRedirect">Especial Homem</p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Ver todos</p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Produtos em promoção
+                                </p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Novidades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Toggleable" data-id="Natural" style="width: 100%; height: 100%;">
+                    <div class="d-flex d-block d-md-none flex-column gap-2" style="padding-left: 1.5rem;">
+                        <nav aria-label="breadcrumb DisplayToggler" data-target="Natural"
+                            style="color: black; margin: 0 !important;">
+                            <ol class="breadcrumb" start="margin: 0">
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Natural"
+                                        style="color: var(--green) !important; width: fit-content;">voltar</a></li>
+                                <li class="breadcrumb-item"><a class="DisplayToggler" data-target="Natural"
+                                        style="color: var(--green) !important; width: fit-content;">Cosmética
+                                        Natural</a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <p class="ProductsPageRedirect">Rosto e Corpo</p>
+                        <p class="ProductsPageRedirect">Cabelo</p>
+                        <p class="ProductsPageRedirect">Higiene Oral</p>
+                    </div>
+                    <div class="row d-none d-md-flex" style="padding-left: 2rem; height: 100%; align-items: center;">
+                        <div class="row" style="align-content: start;">
+                            <div class="col-6 menuTextDiv">
+                                <p class="ProductsPageRedirect">Rosto e Corpo</p>
+                                <p class="ProductsPageRedirect">Cabelo</p>
+                                <p class="ProductsPageRedirect">Higiene Oral</p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Ver todos</p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Produtos em promoção
+                                </p>
+                                <p class="ProductsPageRedirect" style="color: var(--yellow);">Novidades</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block d-lg-none"
+                style="padding-left: 2rem; height: 30vh; width: 100%; background-color: white; line-height: 2; padding-top: 1rem;">
+                <p style="color: var(--yellow);">Ver todos</p>
+                <p style="color: var(--yellow);">Produtos em promoção</p>
+                <p style="color: var(--yellow);">Novidades</p>
+            </div>
+        </div>
+    </div>
     <div style="margin-top: 14rem;"></div>
     <div class="container-lg">
         <div style="position: relative;">

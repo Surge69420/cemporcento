@@ -31,7 +31,9 @@ p {
 .item:hover {
     background-size: 120%;
 }
-
+.CircleTexttext {
+    font-size: 0.65rem; fill: var(--bright-green)
+}
 .CircleText {
     width: 100%;
     height: 100%;

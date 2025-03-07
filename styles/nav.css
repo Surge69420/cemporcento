@@ -17,6 +17,10 @@ body {
     background-color: white;
 }
 
+.ProductsPageRedirect {
+    cursor: pointer;
+}
+
 .menuDiv {
     background-color: var(--green) !important;
     display: flex;
@@ -26,13 +30,46 @@ body {
     color: white;
     gap: 1rem
 }
-.DisplayToggler {
+
+.menuDiv div p {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.menuDiv div p span {
+    font-size: 0.6rem;
+}
+
+.menuDiv div p {
     cursor: pointer;
     transform: all 0.3s ease-in-out;
 }
-.DisplayToggler:hover {
+
+.menuTextDiv {
+    font-size: 0.8rem;
+    line-height: 2.5;
     color: black;
 }
+
+.DisplayToggler {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Toggleable {
+    display: none;
+}
+
+.Toggleable.active {
+    display: block;
+}
+
+.menuDiv div p:hover {
+    color: black;
+}
+
 #MenuBar.active {
     left: 0;
 }
@@ -41,27 +78,34 @@ body {
     z-index: 0;
 }
 
-nav {
+#MenuBtn img {
+    padding: 0;
+    height: 3rem;
+    width: 3rem;
+    gap: 0;
+}
+    
+.navBar {
     background-color: white;
     z-index: 99;
 }
 
 .topBar {
     align-items: center;
-    height: 3rem;
+    height: 2rem;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 0rem !important;
 }
 
-nav .container-lg .topBar,
-nav .container-lg .bottomBar {
+.navBar .container-lg .topBar,
+.navBar .container-lg .bottomBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     margin-bottom: 1rem;
 }
-
-nav {
+.navBar {
 
     width: 100%;
     margin: 0;
@@ -71,10 +115,11 @@ nav {
 
 .Scrolled .container-lg .topBar {
     height: 0;
+    margin-bottom: 0.5rem !important;
     overflow: hidden;
 }
 
-nav .curve {
+.navBar .curve {
     width: 100%;
     aspect-ratio: 1918 / 83;
     position: absolute;
@@ -87,7 +132,7 @@ nav .curve {
     display: none;
 }
 
-nav::before {
+.navBar::before {
     content: '';
     width: 100%;
     aspect-ratio: 1918 / 83;
@@ -104,8 +149,8 @@ nav::before {
     background-size: cover;
 }
 
-nav .container-lg .bottomBar ul,
-nav .topBar ul {
+.navBar .container-lg .bottomBar ul,
+.navBar .topBar ul {
     display: flex;
     list-style: none;
     gap: 1rem;
@@ -115,14 +160,17 @@ nav .topBar ul {
     font-size: 0.8rem;
 }
 
-nav .container-lg .bottomBar .logo {
+.navBar .container-lg .bottomBar .logo {
     height: 10vw;
     width: 10vw;
     position: absolute;
-    margin-top: 4rem;
+    margin-top: 3.1rem;
     left: 50%;
     transform: translate(-50%);
-    transition: all 0.3s ease-in-out;
+    transition-property: height width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
     z-index: 1;
 }
 
@@ -131,7 +179,7 @@ nav .container-lg .bottomBar .logo {
     width: 8vw;
 }
 
-nav .container-lg .bottomBar ul img {
+.navBar .container-lg .bottomBar ul img {
 
     padding: 0;
     height: 3rem;
@@ -140,7 +188,7 @@ nav .container-lg .bottomBar ul img {
 
 .Text-Wrapper {
 
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-top: 0;
     color: var(--green);
     display: flex;
@@ -231,6 +279,10 @@ nav .container-lg .bottomBar ul img {
 
 }
 
+.DisplayToggler {
+    cursor: pointer;
+}
+
 @keyframes LeafAnim {
     0% {
         transform: rotate(5deg) translateY(0);
@@ -242,5 +294,96 @@ nav .container-lg .bottomBar ul img {
 
     100% {
         transform: rotate(5deg) translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .Scrolled .container-lg .topBar {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .navBar .container-lg .bottomBar .logo {
+        height: 10vw;
+        width: 10vw;
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 762px) {
+    .navBar .container-lg .bottomBar .logo {
+        height: 14vw;
+        width: 14vw;
+        margin-top: 2.5rem;
+    }
+    .navBar .container-lg .bottomBar {
+
+        margin-bottom: 0.3rem;
+    }
+    .Scrolled .container-lg .topBar {
+        margin-bottom: 1rem !important;
+    }
+
+    .menuDiv {
+        height: 70vh !important;
+        padding-left: 2rem;
+        align-items: flex-start;
+        width: 95%;
+        padding-top: 5rem;
+    }
+
+    .menuDiv div {
+        width: calc(100% - 4rem);
+    }
+
+    .Toggleable.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .Toggleable {
+        display: block;
+        position: absolute;
+        height: 100vh !important;
+        width: 100vw;
+        color: black;
+        background-color: white;
+        top: 0;
+        padding-top: 8rem;
+        transform: translateX(100%);
+        transition-property: transform, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navBar .container-lg .topBar {
+        margin-bottom: 0.6rem !important;
+    }
+    .navBar .container-lg .bottomBar {
+        margin-bottom: 0.4rem;
+    }
+    .navIcon {
+        font-size: 2rem;
+    }
+    #MenuBtn img {
+        padding: 0;
+        height: 1.8rem;
+        width: 1.8rem;
+        gap: 0;
+    }
+    .navBar .container-lg .bottomBar .logo {
+        height: 18vw;
+        width: 18vw;
+        margin-top: 0.8rem;
+    }
+
+    .Scrolled .container-lg .bottomBar .logo {
+        height: 14vw;
+        width: 14vw;
+        margin-top: 1rem;
     }
 }
