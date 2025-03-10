@@ -1,5 +1,9 @@
 document.getElementById("MenuBtn").addEventListener("click", () => {
   document.getElementById("MenuBar").classList.toggle("active");
+  let MenuBtn = document.getElementById
+  ("MenuBtn");
+  MenuBtn.textContent = MenuBtn.textContent.trim() === "sort" ? "close" : "sort";
+  MenuBtn.classList.toggle("active");
   let displayTogglers = document.querySelectorAll(".DisplayToggler");
   let displayTogglersarr = [...displayTogglers];
   displayTogglersarr.forEach(element => {
@@ -192,3 +196,4 @@ let itemsArr = [...gridItem, ...Items, ...cemPorcentoGridChildren];
 itemsArr.forEach((element) => {
   element.addEventListener("click", () => { window.location.href = "./Product.html" })
 })
+

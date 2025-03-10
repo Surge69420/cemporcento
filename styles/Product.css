@@ -24,10 +24,13 @@
 .productContentList {
     list-style: none;
     padding: 0;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: rgba(46, 46, 46, 0.733);
 }
 .productContentList li {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
 }
 .productContentList li::before{
     content: "";
