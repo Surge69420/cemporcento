@@ -41,3 +41,13 @@
     aspect-ratio: 1 / 1;
     left: 0;
 }
+.breadcrumb-item {
+    --color: var(--green);
+    
+}
+.breadcrumb-item a {
+    color: var(--color); 
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--color) !important;
+}
