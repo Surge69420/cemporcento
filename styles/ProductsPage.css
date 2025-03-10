@@ -18,70 +18,109 @@
     color: var(--bright-green);
     cursor: pointer;
 }
+
 .PageIndicator:hover {
     background-color: var(--bright-green);
     color: white;
 }
-.cemPorcentoProductsPage{
+
+.cemPorcentoProductsPage {
     font-size: 6.5rem;
 }
+
 .ProductsContainer {
     margin-top: 13rem;
 }
+
 .offcanvas-backdrop {
     display: none;
 }
+
 .Category {
     color: var(--green);
 }
-.Category p, .Category p span {
+
+.Category p,
+.Category p span {
     color: black;
     font-size: 0.8rem;
 }
+
 .form-check-input {
-    height: 1.5rem ;
+    height: 1.5rem;
     width: 1.5rem;
     border: 1px solid rgba(0, 0, 0, .35);
 }
+
+.ProductPageDesc {
+    font-size: 0.5rem;
+    padding-left: 5%;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.PriceCut {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-weight: 200;
+    text-decoration: line-through;
+}
+
 @media (max-width: 1200px) {
     .cemPorcentoProductsPage {
         font-size: 6rem;
         margin-bottom: 0;
         margin-top: 1rem;
     }
+
     .CircleTextWrapper div span {
         font-size: 1.7rem;
     }
 }
+
 @media (max-width: 992px) {
+    .ProductPageDesc {
+        font-size: 0.6rem;
+        max-width: 60%;
+        padding-left: 0;
+    }
+
     .cemPorcentoProductsPage {
         font-size: 5rem;
         margin-bottom: 0;
         margin-top: 1rem;
     }
+
     .CircleTextWrapper div span {
         font-size: 1.5rem;
     }
 }
+
 @media (max-width: 762px) {
+
     .cemPorcentoProductsPage {
         font-size: 4rem;
         margin-bottom: 0;
         margin-top: 1rem;
     }
+
     .CircleTextWrapper div span {
         font-size: 1.2rem;
     }
 }
+
 @media (max-width: 576px) {
     .ProductsContainer {
         margin-top: 7rem;
     }
+
     .cemPorcentoProductsPage {
         font-size: 3rem;
         margin-bottom: 0;
         margin-top: 1rem;
     }
+
     .CircleTextWrapper div span {
         font-size: 1rem;
     }
