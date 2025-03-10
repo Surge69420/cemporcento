@@ -279,7 +279,9 @@ p {
         padding-left:0;
 
     }
-
+    .CircleTexttext {
+        font-size: 2rem !important;
+    }
 
 }
 
@@ -304,5 +306,8 @@ p {
     .card:hover {
         box-shadow: none;
         border: 1px solid rgba(0, 0, 0, 0);
+    }
+    .CircleTexttext {
+        font-size: 1rem !important;
     }
 }

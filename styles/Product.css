@@ -11,12 +11,14 @@
     border-radius: 2rem;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.342);
 }
+
 .productBanner {
     aspect-ratio: 1 / 1;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .productContentList {
     list-style: none;
     padding: 0;
@@ -24,11 +26,13 @@
     text-transform: capitalize;
     color: rgba(46, 46, 46, 0.733);
 }
+
 .productContentList li {
     position: relative;
     padding-left: 1.5rem;
 }
-.productContentList li::before{
+
+.productContentList li::before {
     content: "";
     display: block;
     position: absolute;
@@ -40,13 +44,35 @@
     aspect-ratio: 1 / 1;
     left: 0;
 }
+
 .breadcrumb-item {
     --color: var(--green);
-    
+
 }
+
 .breadcrumb-item a {
-    color: var(--color); 
+    color: var(--color);
 }
+
 .breadcrumb-item+.breadcrumb-item::before {
     color: var(--color) !important;
+}
+
+.BuyOption {
+
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    width: 45%;
+    aspect-ratio: 5 /2;
+    color: black;
+    display: flex;
+    column-gap: 0.3rem;
+    padding: 0.1rem;
+    cursor: pointer;
+}
+
+.BuyOption:hover {
+    border: 2px solid orange;
+    color: orange;
+    
 }
