@@ -15,7 +15,15 @@ body {
     z-index: 1;
     top: 0;
     background-color: white;
-
+}
+.menuDiv::before {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    background-color: white;
 }
 
 .ProductsPageRedirect {
@@ -31,7 +39,18 @@ body {
     color: white;
     gap: 1rem
 }
+#MenuBar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: -1;
 
+}
 .menuDiv div p {
     display: flex;
     align-items: center;
@@ -145,13 +164,13 @@ body {
     mask-repeat: no-repeat;
     z-index: 0;
     background: url(../imgs/header.png);
-    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 10px 6px #87b04942);
     background-position: top;
     background-size: cover;
 }
 
-.navBar .container-lg .bottomBar ul,
-.navBar .topBar ul {
+.navBar .container-lg .bottomBar .ul,
+.navBar .topBar .ul {
     display: flex;
     list-style: none;
     gap: 1rem;
@@ -180,7 +199,7 @@ body {
     width: 8vw;
 }
 
-.navBar .container-lg .bottomBar ul img {
+.navBar .container-lg .bottomBar .ul img {
 
     padding: 0;
     height: 3rem;

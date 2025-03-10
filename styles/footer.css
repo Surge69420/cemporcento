@@ -1,6 +1,10 @@
 .footerLink {
+    --color: var(--green);
     text-decoration: none;
-    color: var(--green);
+    color: var(--color);
+    position: relative;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
 }
 .footer {
     margin: 15rem 0 3rem 0 ;
@@ -59,6 +63,24 @@
     transition-timing-function: ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
     animation-delay: 0.3s;
+}
+.footerLink::before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    bottom: -0.35rem;
+    height: 0.3rem;
+    background-color: var(--green);
+    align-self: start;
+    justify-self: start;
+    transition: width 0.2s ease-in-out;
+}
+.footerLink:hover::before {
+    width: 2rem;
+}
+.footerLink:hover {
+    color: black;
 }
 @media (max-width:1200px) {
     .Footerleaf1 {
