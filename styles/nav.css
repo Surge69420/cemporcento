@@ -7,7 +7,7 @@ body {
 
 #MenuBar {
     left: -120%;
-    transition: all 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
     height: 90vh;
     width: 100vw;
     position:
@@ -44,7 +44,7 @@ body {
 
 .menuDiv div p {
     cursor: pointer;
-    transform: all 0.3s ease-in-out;
+    transition: color 0.1s ease-in-out;
 }
 
 .menuTextDiv {
@@ -93,7 +93,9 @@ body {
 .topBar {
     align-items: center;
     height: 2rem;
-    transition: all 0.3s ease-in-out;
+    transition-property: height, margin-bottom;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     margin-bottom: 0rem !important;
 }
 
@@ -142,7 +144,6 @@ body {
     top: calc(100%);
     mask-repeat: no-repeat;
     z-index: 0;
-    transition: all .2sease-in-out;
     background: url(../imgs/header.png);
     filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
     background-position: top;
@@ -170,7 +171,7 @@ body {
     transition-property: height width;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-
+    cursor: pointer;
     z-index: 1;
 }
 
@@ -244,7 +245,9 @@ body {
     background-color: transparent;
     background-position: center;
     border: 0 !important;
-    transition: all 0.3s ease-in-out;
+    transition-property: transform , left, top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
 }
 
@@ -268,7 +271,9 @@ body {
     background-color: transparent;
     background-position: center;
     border: 0 !important;
-    transition: all 0.3s ease-in-out;
+    transition-property: transform , left, top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
 }
 

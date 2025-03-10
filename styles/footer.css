@@ -35,7 +35,9 @@
     background-color: transparent;
     background-position: center;
     border: 0 !important;
-    transition: all 0.3s ease-in-out;
+    transition-property: transform , left, top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
 }
 
@@ -52,7 +54,9 @@
     background-color: transparent;
     background-position: center;
     border: 0 !important;
-    transition: all 0.3s ease-in-out;
+    transition-property: transform , left, top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     animation: LeafAnim 5s infinite ease-in-out;
     animation-delay: 0.3s;
 }

@@ -5,6 +5,7 @@
     --yellow: #eea021;
     --dark-green: #26580f;
     --purple: #e2369a;
+    --grayFading: #4a4a4a9a;
 }
 
 body {
@@ -24,16 +25,19 @@ p {
     background-position: center;
     border-radius: 1rem;
     margin: 0;
-    transition: all 0.3s ease-in-out;
+    transition: background-size 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .item:hover {
     background-size: 120%;
 }
+
 .CircleTexttext {
-    font-size: 0.65rem; fill: var(--bright-green)
+    font-size: 0.65rem;
+    fill: var(--bright-green)
 }
+
 .CircleText {
     width: 100%;
     height: 100%;
@@ -64,7 +68,7 @@ p {
     background-color: rgba(0, 0, 0, 0.219);
 
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     position: absolute;
     cursor: pointer;
 }
@@ -80,7 +84,9 @@ p {
 .card {
     border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition-property: border-color, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     margin-bottom: 1rem;
 }
 
@@ -88,9 +94,11 @@ p {
     border-color: rgba(0, 0, 0, 0.219);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.329);
 }
+
 .card:hover .card-body .card-title {
-    color:#111
+    color: #111
 }
+
 .card-body {
     padding: 2rem;
     color: var(--gray);
@@ -136,11 +144,13 @@ p {
     left: 30%;
     animation: LeafAnim 5s ease-in-out infinite;
 }
+
 .FamiliaImgs {
-    aspect-ratio: 1 / 1;  
+    aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
 }
+
 .leafFamiliaBottom {
     height: 7rem;
     width: 7rem;
@@ -153,32 +163,45 @@ p {
     right: 30%;
     animation: LeafAnim 5s ease-in-out infinite;
 }
+
 .slick-dots li {
     height: fit-content;
     width: fit-content;
     margin: 0;
 }
+
 .slick-dots {
     display: flex !important;
     justify-content: center;
     gap: 0.4rem;
     margin-top: 2rem;
 }
+
 .dot {
     height: 0.8rem;
     width: 0.8rem;
     border-radius: 50%;
     background-color: var(--bright-green);
-    transition: all 0.3s ease-in-out;
+    transition-property: width, border-radius, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 }
+
 .slick-active {
     width: fit-content;
 }
+
 .slick-active .dot {
     background-color: var(--green);
     width: 30px;
     border-radius: 2rem;
 }
+
+.SliderHeader {
+
+    padding-left: 3rem;
+}
+
 
 @keyframes circleText {
     0% {
@@ -193,65 +216,93 @@ p {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
 @media (max-width: 1200px) {
     .leafFamiliaTop {
         height: 6rem;
         width: 6rem;
     }
+
     .leafFamiliaBottom {
         height: 6rem;
         width: 6rem;
     }
+
     .familia h1 {
         font-size: 3.5rem;
     }
 }
+
 @media (max-width: 992px) {
     .leafFamiliaTop {
         height: 5rem;
         width: 5rem;
     }
+
     .leafFamiliaBottom {
         height: 5rem;
         width: 5rem;
     }
+
     .familia h1 {
         font-size: 3rem;
     }
+
     .card-body .badgeP {
         font-size: 0.45rem;
     }
+    .SliderHeader {
+
+        padding-left:0;
+
+    }
+
 }
+
 @media (max-width: 762px) {
     .leafFamiliaTop {
         height: 4rem;
         width: 4rem;
     }
+
     .leafFamiliaBottom {
         height: 4rem;
         width: 4rem;
     }
+
     .familia h1 {
         font-size: 2rem;
     }
+
+    .SliderHeader {
+
+        padding-left:0;
+
+    }
+
+
 }
-@media (max-width: 576px)
- {
+
+@media (max-width: 576px) {
     .card-body .badgeP {
         font-size: 0.4rem;
         letter-spacing: 0.1rem !important;
     }
+
     .card-title {
         font-size: 1rem;
     }
+
     .card-text {
         display: none;
     }
+
     .card-body {
         padding: 1rem 0rem;
     }
+
     .card:hover {
         box-shadow: none;
         border: 1px solid rgba(0, 0, 0, 0);
     }
- }
+}

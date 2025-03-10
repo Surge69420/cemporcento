@@ -6,6 +6,8 @@
     color: transparent;
     background-size: cover;
     background-position: top;
+    position: relative;
+    margin-bottom: 1.2rem;
 }
 .CemPorcentoDesc {
     color: var(--dark-green);
@@ -41,7 +43,9 @@
     width: 0;
     height: 0;
     background-color: rgba(0, 0, 0, 0.45);
-    transition: all 0.3s ease-in-out;
+    transition-property: height, width, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
     padding: 0.5rem 1rem;
     display: flex;
     opacity: 0;
@@ -61,7 +65,31 @@
     opacity: 1;
 }
 .CemPorcento {
-    margin-top: 10rem;
+    margin-top: 15rem;
+}
+.CemPorcentoTitle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -24%;
+    left: 20%;
+    width: 7%;
+    background-image: url(../imgs/porcentoleaf1.png);
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.CemPorcentoTitle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7%;
+    right: 28%;
+    width: 7%;
+    background-image: url(../imgs/Cemporcentoleaf2.png);
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .cemPorcentoSliderItem {
     aspect-ratio: 343 / 274.39;
@@ -81,6 +109,16 @@
     .CemPorcentoTitle {
         font-size: 6rem;
     }
+    .CemPorcentoTitle::after {
+        bottom: -30%;
+        left: 15%;
+        width: 10%;
+    }
+    .CemPorcentoTitle::before {
+        top: 5%;
+        right: 25%;
+        width: 10%;
+    }
 }
 @media (max-width: 992px)
 {
@@ -88,10 +126,31 @@
     {
         font-size: 5rem;
     }
+    .CemPorcentoTitle::after {
+        bottom: -42%;
+        left: 10%;
+        width: 10%;
+    }
+    .CemPorcentoTitle::before {
+        top: 5%;
+        right: 20%;
+        width: 10%;
+    }
 }
 @media (max-width: 762px) {
     .CemPorcentoTitle {
         font-size: 4rem;
+        margin-bottom: 2.5rem;
+    }
+    .CemPorcentoTitle::after {
+        bottom: -60%;
+        left: 5%;
+        width: 12%;
+    }
+    .CemPorcentoTitle::before {
+        top: 5%;
+        right: 15%;
+        width: 10%;
     }
 }
 @media (max-width: 576px)
@@ -99,4 +158,5 @@
     .CemPorcentoTitle {
         font-size: 3rem;
     }
+
 }
