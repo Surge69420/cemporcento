@@ -88,10 +88,8 @@
                             <div class="dropdown">
                                 <button
                                     style="padding: 0 !important; display: flex; align-items: center;  border: 0; background-color: transparent !important; color: black !important; font-size: 0.7rem;"
-                                    class="footerLink btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                    
-                                    >
+                                    class="footerLink btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="material-symbols-rounded"
                                         style="font-size: 1rem; color: var(--green);"> support_agent</span> Alimentação
                                     Saudável
@@ -110,8 +108,8 @@
                             <div class="dropdown">
                                 <button
                                     style="padding: 0 !important; display: flex; align-items: center;  border: 0; background-color: transparent !important; color: black !important; font-size: 0.7rem;"
-                                    class="footerLink btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                    class="footerLink btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="material-symbols-rounded"
                                         style="font-size: 1rem; color: var(--green);"> person</span> Login/Conta
                                 </button>
@@ -157,7 +155,8 @@
                 <img class="ml-auto logo" src="imgs/logo.png" alt="" onclick="window.location.href='index.html'">
                 <div class="d-flex">
                     <ul class="ul d-none d-xl-flex">
-                        <li class="footerLink d-flex align-items-center gap-1" style="--color: red"> <span> Sim verao </span> <span class="material-symbols-rounded" style="color: yellow;">sunny</span></li>
+                        <li class="footerLink d-flex align-items-center gap-1" style="--color: red"> <span> Sim verao
+                            </span> <span class="material-symbols-rounded" style="color: yellow;">sunny</span></li>
                         <li class="footerLink" style="--color: black">Novas Marinheiras</li>
                         <li>
                             <span style="font-size: 1.5rem;">
@@ -434,8 +433,25 @@
         </div>
     </div>
     </div>
-    <div class="Banner">
-
+    <div class="BannerWrapper" style="position: relative;">
+        <div class="Banner">
+            <div class="BannerSlide1"></div>
+            <div class="BannerSlide2"></div>
+            <div class="BannerSlide3"></div>
+            <div class="BannerSlide4"></div>
+        </div>
+        <div id="BannerSlideBtns"
+            class="d-flex flex-row flex-sm-column column-gap-2 justify-content-end justify-content-md-center align-items-end pe-5  row-gap-3 h-100 w-100 position-absolute top-0 start-0"
+            style="padding-bottom: 2.5rem;">
+            <div class="BannerButton active" style="background-image: url(imgs/Banner1Big.jpg);"
+                onclick="$('.Banner').slick('slickGoTo',0);"></div>
+            <div class="BannerButton" style="background-image: url(imgs/Banner2Big.jpg);"
+                onclick="$('.Banner').slick('slickGoTo',1);"></div>
+            <div class="BannerButton" style="background-image: url(imgs/Banner3Big.jpg);"
+                onclick="$('.Banner').slick('slickGoTo',2);"></div>
+            <div class="BannerButton" style="background-image: url(imgs/Banner4Big.jpg);"
+                onclick="$('.Banner').slick('slickGoTo',3);"></div>
+        </div>
     </div>
     <div class="container-lg">
         <div class="row mt-5 mb-5 d-none d-sm-flex">
@@ -1188,11 +1204,25 @@
         <div class="container-lg">
             <div class="row">
                 <div class="col-xl-3 d-none d-md-block mb-3">
-                    <div class="d-flex justify-content-between">
-                        <img src="imgs/logo.png" alt="" style="height: 7rem; width: 7rem;">
-                        <div>
 
-                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center gap-3">
+                            <img src="imgs/logo.png" alt="" style="height: 7rem; width: 7rem;">
+                            <div>
+                                <div class="d-flex gap-2 align-items-center"
+                                    style="color: var(--grayFading); font-size: 0.5rem;">
+                                    <span class="material-symbols-rounded">
+                                        whatshot
+                                    </span> <span class="material-symbols-rounded">
+                                        photo_camera
+                                    </span>
+                                    <span class="material-symbols-rounded">
+                                        mail
+                                    </span>
+                                </div>
+                            </div>
+
+                        
                     </div>
                     <p style="color: var(--grayFading); font-size: 0.8rem;">Marca registada CEM PORCENTO é propriedade
                         da

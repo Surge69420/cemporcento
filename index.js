@@ -45,6 +45,23 @@ window.onscroll = function () {
   }
 }
 
+$('.Banner').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+});
+
+$('.Banner').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  let slidesWrapper = document.getElementById("BannerSlideBtns");
+  let slides = slidesWrapper.children;
+  let slidesArr = [...slides];
+  slidesArr.forEach((element) => {
+    element.classList.remove("active");
+  })
+  slides[nextSlide].classList.add("active");
+
+});
 
 $('.multiple').slick({
   dots: true,
