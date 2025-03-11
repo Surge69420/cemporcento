@@ -1,9 +1,12 @@
 .griditem {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    --border: 1px solid rgba(0, 0, 0, 0.1);
+    border: var(--border);
     border-radius: 2rem;
     transition: border 0.3s ease-in-out;
     cursor: pointer;
-    
+}
+.ProdTable .griditem {
+    --border: 1px solid rgba(0,0,0,0)
 }
 
 .griditem:hover {

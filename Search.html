@@ -90,10 +90,8 @@
                             <div class="dropdown">
                                 <button
                                     style="padding: 0 !important; display: flex; align-items: center;  border: 0; background-color: transparent !important; color: black !important; font-size: 0.7rem;"
-                                    class="footerLink btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                    
-                                    >
+                                    class="footerLink btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="material-symbols-rounded"
                                         style="font-size: 1rem; color: var(--green);"> support_agent</span> Alimentação
                                     Saudável
@@ -112,8 +110,8 @@
                             <div class="dropdown">
                                 <button
                                     style="padding: 0 !important; display: flex; align-items: center;  border: 0; background-color: transparent !important; color: black !important; font-size: 0.7rem;"
-                                    class="footerLink btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                    class="footerLink btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="material-symbols-rounded"
                                         style="font-size: 1rem; color: var(--green);"> person</span> Login/Conta
                                 </button>
@@ -141,10 +139,10 @@
                         <li>
 
                         </li>
-                        <li class="footerLink" style="--color: black">Alimentação</li>
-                        <li class="footerLink" style="--color: black">Suplementos</li>
-                        <li class="footerLink" style="--color: black">Cosmética</li>
-                        <li class="footerLink" style="--color: black">Nutrição Desportiva</li>
+                        <li class="footerLink" style="--color: black" onclick="window.location.href ='/Products.html'">Alimentação</li>
+                        <li class="footerLink" style="--color: black" onclick="window.location.href ='/Products.html'">Suplementos</li>
+                        <li class="footerLink" style="--color: black" onclick="window.location.href ='/Products.html'">Cosmética</li>
+                        <li class="footerLink" style="--color: black" onclick="window.location.href ='/Products.html'">Nutrição Desportiva</li>
                     </ul>
                     <ul class="ul d-flex d-xl-none align-items-center gap-3 mx-3">
                         <span class="material-symbols-rounded navIcon">
@@ -159,15 +157,16 @@
                 <img class="ml-auto logo" src="imgs/logo.png" alt="" onclick="window.location.href='index.html'">
                 <div class="d-flex">
                     <ul class="ul d-none d-xl-flex">
-                        <li class="footerLink d-flex align-items-center gap-1" style="--color: red"> <span> Sim verao </span> <span class="material-symbols-rounded" style="color: yellow;">sunny</span></li>
-                        <li class="footerLink" style="--color: black">Novas Marinheiras</li>
+                        <li class="footerLink d-flex align-items-center gap-1" style="--color: red" onclick="window.location.href ='/Products.html'">  <span> Sim verao
+                            </span> <span class="material-symbols-rounded" style="color: yellow;">sunny</span></li>
+                        <li class="footerLink" style="--color: black" onclick="window.location.href ='/Products.html'">Novas Marinheiras</li>
                         <li>
-                            <span style="font-size: 1.5rem;">
+                            <span style="font-size: 1.5rem; cursor: pointer !important;" onclick="window.location.href ='/Products.html'">
                                 %
                             </span>
                         </li>
                         <li>
-                            <span class="material-symbols-rounded navIcon">
+                            <span class="material-symbols-rounded navIcon" style="cursor: pointer;" onclick="window.location.href ='/Search.html'">
                                 search
                             </span>
                         </li>
@@ -175,10 +174,10 @@
                         </li>
                     </ul>
                     <ul class="ul d-flex d-xl-none align-items-center">
-                        <span style="font-size: 1.5rem;">
+                        <span style="font-size: 1.5rem; cursor: pointer !important;" onclick="window.location.href ='/Products.html'">
                             %
                         </span>
-                        <span class="material-symbols-rounded navIcon">
+                        <span class="material-symbols-rounded navIcon" style="cursor: pointer;"  onclick="window.location.href ='/Search.html'">
                             search
                         </span>
                         <span class="material-symbols-rounded navIcon">
@@ -441,8 +440,8 @@
             <div class="SearchBarWrapper col-12 col-sm-10 col-md-8 col-lg-7 p-4">
                 <div class="topWrapper d-flex justify-content-between align-items-center">
                     <h3 style="color: var(--green);">O que procura?</h3>
-                    <div class="closeBtn d-flex align-items-center">
-                        Fechar <div class="p-2 m-2"
+                    <div onclick="window.location.href='/index.html'" style="cursor: pointer;" class="closeBtn d-flex align-items-center">
+                        Fechar <div  class="p-2 m-2"
                             style=" aspect-ratio: 1 / 1; align-items: center; justify-content: center; background-color: var(--green); border-radius: 50%;">
                             <span class="material-symbols-rounded d-flex align-content-center">close</span></div>
                     </div>
@@ -520,10 +519,10 @@
                 <div class="BottomWrapper d-flex justify-content-between">
                     <div class="row w-100 ">
                         <div class="col-12 col-sm-9 my-1 ps-sm-0" >
-                            <div class="searchBar" style="width: 100%; height: 3rem; border: 1px solid var(--gray); border-radius: 3rem;"></div>
+                            <div class="searchBar p-2 ps-4 d-flex align-items-center" contenteditable="true" style="width: 100%; height: 3rem; border: 1px solid var(--gray); border-radius: 3rem;"></div>
                         </div>
                         <div class="col-12 col-sm-3 my-1 pe-sm-0" >
-                            <div class="searchBar d-flex justify-content-center align-items-center" style="width: 100%; height: 3rem; color: white;  background-color: var(--green); border-radius: 3rem;"><h5 class="m-0 h6" style="font-weight: normal;">Pesquisar</h5></div>
+                            <div class="searchBar d-flex justify-content-center align-items-center" style="width: 100%; height: 3rem; color: white;  background-color: var(--green); border-radius: 3rem;"><h5 class="m-0 h6" style="font-weight: normal; cursor: pointer;">Pesquisar</h5></div>
                         </div>
                     </div>
                 </div>

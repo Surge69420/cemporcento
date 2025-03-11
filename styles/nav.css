@@ -15,6 +15,11 @@ body {
     z-index: 1;
     top: 0;
     background-color: white;
+    min-height: 600px;
+    max-height: 700px;
+}
+.menuDiv2 {
+    margin-top: 160px;
 }
 .menuDiv::before {
     display: block;
@@ -33,7 +38,8 @@ body {
 .menuDiv {
     background-color: var(--green) !important;
     display: flex;
-    justify-content: center;
+    padding-top: 160px;
+    min-height: fit-content;
     align-items: center;
     flex-direction: column;
     color: white;
@@ -272,8 +278,8 @@ body {
 
 .Scrolled .leaf2 {
     left: 70%;
-    transform: translateY(-100%, -70%);
-    top: -100%;
+    transform: translateY(-110%, -70%);
+    top: -110%;
 
 }
 
@@ -298,8 +304,8 @@ body {
 
 .Scrolled .leaf1 {
     left: 30%;
-    transform: translateY(-100%, -30%);
-    top: -100%;
+    transform: translateY(-110%, -30%);
+    top: -110%;
 
 }
 
@@ -353,8 +359,11 @@ body {
         align-items: flex-start;
         width: 95%;
         padding-top: 5rem;
+        justify-content: center;
     }
-
+    .menuDiv2 {
+        margin-top: 0px;
+    }
     .menuDiv div {
         width: calc(100% - 4rem);
     }

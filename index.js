@@ -1,9 +1,9 @@
 let topbar = document.querySelector("nav");
-  if(window.location.pathname !== "/index.html"){ topbar.classList.contains("Scrolled")? null : topbar.classList.add("Scrolled"); }
+if (window.location.pathname !== "/index.html") { topbar.classList.contains("Scrolled") ? null : topbar.classList.add("Scrolled"); }
 document.getElementById("MenuBtn").addEventListener("click", () => {
   document.getElementById("MenuBar").classList.toggle("active");
   let MenuBtn = document.getElementById
-  ("MenuBtn");
+    ("MenuBtn");
   MenuBtn.textContent = MenuBtn.textContent.trim() === "sort" ? "close" : "sort";
   MenuBtn.classList.toggle("active");
   let displayTogglers = document.querySelectorAll(".DisplayToggler");
@@ -38,7 +38,7 @@ displayTogglersarr.forEach(element => {
 
 window.onscroll = function () {
   let topbar = document.querySelector("nav");
-  if(window.location.pathname !== "/index.html"){ topbar.classList.contains("Scrolled")? null : topbar.classList.add("Scrolled"); return; }
+  if (window.location.pathname !== "/index.html") { topbar.classList.contains("Scrolled") ? null : topbar.classList.add("Scrolled"); return; }
   if (window.scrollY > 50) {
     topbar.classList.add("Scrolled");
   } else {
@@ -53,7 +53,7 @@ $('.Banner').slick({
   autoplaySpeed: 4000,
 });
 
-$('.Banner').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+$('.Banner').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
   let slidesWrapper = document.getElementById("BannerSlideBtns");
   let slides = slidesWrapper.children;
   let slidesArr = [...slides];
@@ -209,10 +209,16 @@ ProductsPageRedirect.forEach((element) => {
 
 
 let gridItem = document.querySelectorAll(".griditem");
-let cemPorcentoGridChildren = document.querySelector(".cemPorcentoGrid").children;
+let cemPorcentoGridChildren = document.querySelector(".cemPorcentoGrid");
 let Items = document.querySelectorAll(".item");
-let itemsArr = [...gridItem, ...Items, ...cemPorcentoGridChildren];
-
+let itemsArr;
+if (cemPorcentoGridChildren) {
+  cemPorcentoGridChildren = cemPorcentoGridChildren.children;
+  itemsArr = [...gridItem, ...Items, ...cemPorcentoGridChildren];
+}
+else {
+  itemsArr = [...gridItem, ...Items];
+}
 itemsArr.forEach((element) => {
   element.addEventListener("click", () => { window.location.href = "./Product.html" })
 })

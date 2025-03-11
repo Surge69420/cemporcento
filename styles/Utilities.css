@@ -80,7 +80,15 @@ p {
 .CircleTextWrapper div span {
     font-size: 2.5rem;
 }
-
+.dropdown-menu {
+    border: 0 !important;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0,0.3);
+    border-radius: 1rem;
+}
+.dropdown-item.active, .dropdown-item:active,.dropdown-item:focus, .dropdown-item:hover  {
+    background-color: #ccc;
+    color: var(--gray);
+}
 .card {
     border: 1px solid rgba(0, 0, 0, 0);
     cursor: pointer;
