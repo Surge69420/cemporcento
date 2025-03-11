@@ -1,4 +1,5 @@
 document.getElementById("MenuBtn").addEventListener("click", () => {
+  
   document.getElementById("MenuBar").classList.toggle("active");
   let MenuBtn = document.getElementById
   ("MenuBtn");
@@ -36,6 +37,7 @@ displayTogglersarr.forEach(element => {
 
 window.onscroll = function () {
   let topbar = document.querySelector("nav");
+  if(window.location.pathname === "/Product.html"){ return; }
   if (window.scrollY > 50) {
     topbar.classList.add("Scrolled");
   } else {
