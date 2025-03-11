@@ -41,7 +41,7 @@
    border-color: var(--green) !important;
 }
 .productpic {
-    aspect-ratio: 1.25;
+    aspect-ratio: 1.5;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
