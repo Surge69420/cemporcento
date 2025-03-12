@@ -226,9 +226,24 @@ p {
     }
 }
 @media (min-width: 1500px) {
-    .container-lg {
+    .container-lg .container-lg {
+        max-width: 100%;
+    }
+    .footer > .container-lg {
+        max-width: 80%;
+    }
+    body > .container-lg {
 
         max-width: 80%;
+    }
+    nav .container-lg {
+        max-width: 80%;
+    }
+    .card-title {
+        font-size: 2rem;
+    }
+    .card-text {
+        font-size: 1.2rem;
     }
 }
 @media (max-width: 1200px) {
