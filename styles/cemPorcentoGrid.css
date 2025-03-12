@@ -65,7 +65,7 @@
     opacity: 1;
 }
 .CemPorcento {
-    margin-top: 15rem;
+    margin-top: 5rem;
 }
 .CemPorcentoTitle::after {
     content: "";

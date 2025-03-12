@@ -3,14 +3,44 @@
     color: #4a4a4a;
     font-family: 'Gabarito';
 }
+
 .RecipeImgDesc {
-    color: #4a4a4a; font-size: 0.5rem; font-family: 'Gabarito';
+    color: #4a4a4a;
+    font-size: 0.5rem;
+    font-family: 'Gabarito';
 }
 
+.RecipePgImg {
+    width: 35vw;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.RecipeImgDiv {
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.RecipeImgDiv:hover h5,
+.RecipeImgDiv:hover p {
+    color: var(--green);
+}
+
+.RecipePgTitle {
+    font-weight: bold;
+    color: var(--green);
+    font-size: 3rem;
+}
+@media (max-width:762px) {
+    .RecipePgTitle {
+        font-size: 2.5rem;
+    }
+}
 @media (min-width: 2000px) {
     .RecipeBreadCrumb {
         font-size: 1rem;
     }
+
     .RecipeImgDesc {
         font-size: 0.8rem;
     }
