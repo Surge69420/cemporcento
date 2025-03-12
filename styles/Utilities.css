@@ -54,6 +54,7 @@ p {
     position: relative;
     aspect-ratio: 1 / 1;
     width: 20vw;
+    max-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,7 +225,12 @@ p {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+@media (min-width: 1500px) {
+    .container-lg {
 
+        max-width: 80%;
+    }
+}
 @media (max-width: 1200px) {
     .leafFamiliaTop {
         height: 6rem;

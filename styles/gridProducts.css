@@ -1,6 +1,7 @@
 .griditem {
     --border: 1px solid rgba(0, 0, 0, 0.1);
     border: var(--border);
+
     border-radius: 2rem;
     transition: border 0.3s ease-in-out;
     cursor: pointer;
@@ -52,4 +53,20 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media (min-width: 2000px) {
+    .gridItemPrice {
+        font-size: 3rem;
+
+    }
+    .badgeP { 
+        font-size: 0.8rem;
+    }
+    .gridItemtitle {
+        font-size: 1.5rem;
+    }
+    .griditem div p {
+        font-size: 0.8rem !important;
+    }
 }

@@ -1,7 +1,7 @@
 .productpics {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .75rem;
 
 }
 

@@ -104,6 +104,12 @@
 .cemPorcentoSliderItemWrapper p {
     margin-top: 1rem;
 }
+@media (min-width: 2000px) {
+    .cemPorcentoGrid div div {
+        font-size: 2rem;
+        padding: 1rem 1.7rem;
+    }
+}
 @media (max-width: 1200px)
 {
     .CemPorcentoTitle {

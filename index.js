@@ -68,7 +68,7 @@ $('.multiple').slick({
   dots: true,
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 7,
   slidesToScroll: 1,
   centerMode: true,
   infinite: true,
@@ -80,6 +80,31 @@ $('.multiple').slick({
   },
   responsive: [
     {
+      breakpoint: 1500,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },{
+      breakpoint: 2000,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 2400,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }, {
       breakpoint: 992,
       settings: {
         slidesToShow: 3,
@@ -124,6 +149,15 @@ $('.GridSlider').slick({
     return '<div class="dot"></div>';
   },
   responsive: [
+    {
+      breakpoint: 2000,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }, 
     {
       breakpoint: 992,
       settings: {
@@ -173,6 +207,15 @@ $('.cemPorcentoSlider').slick({
     return '<div class="dot"></div>';
   },
   responsive: [
+    {
+      breakpoint: 2000,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },    
     {
       breakpoint: 992,
       settings: {

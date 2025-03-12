@@ -131,6 +131,9 @@ body {
     flex-direction: row;
     margin-bottom: 1rem;
 }
+.bottomBar {
+    margin-top: 0.3rem;
+}
 .navBar {
 
     width: 100%;
@@ -141,7 +144,7 @@ body {
 
 .Scrolled .container-lg .topBar {
     height: 0;
-    margin-bottom: 0.5rem !important;
+    margin-bottom:  clamp(3ch,5%, 15ch);
     overflow: hidden;
 }
 
@@ -189,7 +192,9 @@ body {
     height: 10vw;
     width: 10vw;
     position: absolute;
-    margin-top: 3.1rem;
+    margin-top: clamp(1ch,5%, 15ch);
+    max-width: 200px;
+    max-height: 200px;
     left: 50%;
     transform: translate(-50%);
     transition-property: height width;
@@ -202,6 +207,8 @@ body {
 .Scrolled .container-lg .bottomBar .logo {
     height: 8vw;
     width: 8vw;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 .navBar .container-lg .bottomBar .ul img {
