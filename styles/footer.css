@@ -82,6 +82,11 @@
 .footerLink:hover {
     color: black;
 }
+@media (min-width: 2000px) {
+    .footerLink {
+        font-size: 1.3rem;
+    }
+}
 @media (max-width:1200px) {
     .Footerleaf1 {
         left: 25%;
