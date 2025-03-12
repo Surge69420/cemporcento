@@ -1,0 +1,17 @@
+.RecipeBreadCrumb {
+    font-size: 0.8rem;
+    color: #4a4a4a;
+    font-family: 'Gabarito';
+}
+.RecipeImgDesc {
+    color: #4a4a4a; font-size: 0.5rem; font-family: 'Gabarito';
+}
+
+@media (min-width: 2000px) {
+    .RecipeBreadCrumb {
+        font-size: 1rem;
+    }
+    .RecipeImgDesc {
+        font-size: 0.8rem;
+    }
+}
