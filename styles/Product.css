@@ -4,7 +4,9 @@
     gap: .75rem;
 
 }
-
+.productBreadCrumb {
+    margin: 0; font-size: 0.9rem !important
+}
 .ProductCollapse {
     --icon : "add";
     --iconHover : "remove";
@@ -125,4 +127,42 @@
     border: 2px solid orange;
     color: orange;
 
+}
+
+@media (min-width: 2000px) {
+    .ProductCollapse span {
+        font-size: 1.5rem;
+    }
+    .ProductCollapse span::after {
+
+        font-size: 2.5rem;
+    }
+    .ProductPageProdTitle {
+        font-size: 2.5rem;
+    }
+    .productContentList li,.productContentList li::before {
+        font-size: 1.2rem;
+    }
+    .PriceCut {
+        font-size: 1.2rem;
+    }
+    .ProductPageDesc {
+        font-size: 0.7rem ;
+    }
+    .productpics {
+        gap: 2rem;
+    }
+    .productBreadCrumb {
+        font-size: 1.4rem !important
+    }
+    .productBreadCrumb li a .material-symbols-rounded {
+        font-size: 1rem !important;
+    }
+
+    .BuyOption p {
+        font-size: 1.5rem;
+    }
+    .BuyOption span {
+        font-size: 0.95rem;
+    }
 }
