@@ -34,7 +34,7 @@
 .footerLink {
     color: black;
 }
-.footerLink:hover,.footerLink:active {
+.footerLink:hover,.footerLink.active {
     color: var(--green);
 } 
 .footerLink.active::before {

@@ -38,10 +38,10 @@ FilterOptionsArr.forEach(element => {
         e.classList.remove("active");
       }
     })
-    let filterList = document.querySelectorAll(".FilterDiv");
+    let filterList = document.querySelectorAll(".Filter");  
     filterList = [...filterList];
     filterList.forEach(e => {
-      if (e.getAttribute("data-id") === data) {
+      if (e.getAttribute("data-id").includes(data)) {
         e.classList.remove("d-none");
       } else {
         e.classList.add("d-none");
