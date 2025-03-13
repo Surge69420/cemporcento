@@ -20,8 +20,17 @@ document.getElementById("MenuBtn").addEventListener("click", () => {
       e.classList.remove("active");
     })
   });
-  });
+});
 
+
+let supportBtns = document.getElementsByClassName("supportBtn");
+supportBtns = [...supportBtns];
+supportBtns.forEach((e) => {
+  e.addEventListener("click", () => {
+    let supportBar = document.querySelector(".supportBar");
+    supportBar.classList.toggle("inactive");
+  })
+})
 
 let FilterOptions = document.querySelectorAll(".FilterOptions");
 let FilterOptionsArr = [...FilterOptions]
@@ -30,15 +39,14 @@ FilterOptionsArr.forEach(element => {
   element.addEventListener("click", () => {
 
     FilterOptionsArr.forEach(e => {
-      if(e.getAttribute("data-target") === element.getAttribute("data-target"))
-      {
+      if (e.getAttribute("data-target") === element.getAttribute("data-target")) {
         e.classList.add("active");
       }
-      else{
+      else {
         e.classList.remove("active");
       }
     })
-    let filterList = document.querySelectorAll(".Filter");  
+    let filterList = document.querySelectorAll(".Filter");
     filterList = [...filterList];
     filterList.forEach(e => {
       if (e.getAttribute("data-id").includes(data)) {

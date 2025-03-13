@@ -5,15 +5,31 @@
     width: 100vw;
     margin-top: 6rem;
 }
+.supportBar {
+    transition-property: height, padding;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    height: calc-size(auto, size);
+}
+.supportBtn {
+    cursor: pointer;
+}
+.supportBar.inactive {
+    height: 0 !important;
+    padding: 0 !important;
+}
 
 .Banner Div {
     height: 100%;
     background-size: cover;
     background-position: top;
 }
+
 .BannerWrapper {
-    position: relative;;
+    position: relative;
+    ;
 }
+
 .BannerWrapper:after {
     content: 'keyboard_arrow_down';
     font-family: 'Material Symbols Rounded';
@@ -30,18 +46,23 @@
     color: white;
     aspect-ratio: 3890 / 74;
 }
+
 .BannerSlide1 {
     background-image: url("../imgs/Banner1Big.jpg");
 }
+
 .BannerSlide2 {
     background-image: url("../imgs/Banner2Big.jpg");
 }
+
 .BannerSlide3 {
     background-image: url("../imgs/Banner3Big.jpg");
 }
+
 .BannerSlide4 {
     background-image: url("../imgs/Banner4Big.jpg");
 }
+
 .BannerButton {
     width: 10vw;
     max-width: 75px;
@@ -58,22 +79,28 @@
     opacity: 1;
     border: 0.3vw solid white;
 }
+
 .BannerSlideBtns {
     margin-bottom: 50rem;
 }
+
 @media (max-width:992px) {
     .Banner {
         height: 90vw;
     }
+
     .BannerSlide1 {
         background-image: url("../imgs/Banner1Mobile.jpg");
     }
+
     .BannerSlide2 {
         background-image: url("../imgs/Banner2Mobile.jpg");
     }
+
     .BannerSlide3 {
         background-image: url("../imgs/Banner3Mobile.jpg");
     }
+
     .BannerSlide4 {
         background-image: url("../imgs/Banner4Mobile.jpg");
     }
