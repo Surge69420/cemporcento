@@ -128,7 +128,7 @@ p {
 .familia {
     position: relative;
     margin: 8rem 0rem !important;
-    margin-top: 10rem !important;
+    margin-top: 6rem !important;
 }
 
 .familia h1 {
@@ -187,8 +187,8 @@ p {
 }
 
 .dot {
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.8rem !important;
+    width: 0.8rem ;
     border-radius: 50%;
     background-color: var(--bright-green);
     transition-property: width, border-radius, background-color;

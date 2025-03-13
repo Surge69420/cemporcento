@@ -81,8 +81,8 @@
                                         support_agent
                                     </span>Enviar mensagen</h6>
                                 <h6 class="d-flex gap-2 align-items-center"
-                                    style="font-weight: 400;font-size: clamp(1rem,1vw,2rem);"><span
-                                        class="material-symbols-rounded" style="font-size: clamp(1rem,2vw,2.5rem);">
+                                    style="font-weight: 400; font-size: clamp(1rem,1vw,2rem);"><span
+                                        class="material-symbols-rounded" style="font-size: clamp(2rem,2vw,2.5rem);">
                                         box
                                     </span>Termos e <br> condiçoes</h6>
                             </div>
@@ -177,23 +177,14 @@
                         </li>
                         <li>
                             <div class="dropdown">
-                                <button
+                                <button  onclick="window.location.href='/Login.html'"
                                     style="padding: 0 !important; display: flex; align-items: center;  border: 0; background-color: transparent !important; color: black !important; font-size: 0.7rem;"
                                     class="footerLink btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    aria-expanded="false">
                                     <span class="material-symbols-rounded"
                                         style="font-size: 1rem; color: var(--green);"> person</span> Login/Conta
                                 </button>
-                                <ul class="dropdown-menu" style="">
-                                    <li><a class="dropdown-item" href="#" onclick="DropDownSelect(this)">Action</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" onclick="DropDownSelect(this)">Another
-                                            action</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="DropDownSelect(this)">Something
-                                            else
-                                            here</a>
-                                    </li>
-                                </ul>
+
                             </div>
                         </li>
                         <li>
@@ -244,7 +235,7 @@
                         <span class="supportBtn footerLink material-symbols-rounded navIcon" style="color: black;">
                             support_agent
                         </span>
-                        <span class="material-symbols-rounded navIcon">
+                        <span onclick="window.location.href='/Login.html'" style="color: black;" class="supportBtn footerLink material-symbols-rounded navIcon">
                             person
                         </span>
 
@@ -567,30 +558,30 @@
             <div class="col-12 col-lg-3 ">
                 <div class="d-flex flex-column gap-2 rounded-4 border p-3"
                     style="color: #4a4a4a !important; font-weight: 450;">
-                    <a class="footerLink FilterOptions" data-target="Bebidas" >Bebidas,
+                    <a class="footerLink FilterOptions" data-target="Bebidas" style="--color: #4a4a4a">Bebidas,
                         Sumos e Batidos</a>
-                    <a class="footerLink FilterOptions" data-target="2" >Entradas e
+                    <a class="footerLink FilterOptions" data-target="2" style="--color: #4a4a4a">Entradas e
                         Saladas</a>
-                    <a class="footerLink FilterOptions" data-target="Snacks">Lanches e
+                    <a class="footerLink FilterOptions" data-target="Snacks" style="--color: #4a4a4a">Lanches e
                         Snacks</a>
-                    <a class="footerLink FilterOptions" data-target="4" >Ocasiões
+                    <a class="footerLink FilterOptions" data-target="4" style="--color: #4a4a4a">Ocasiões
                         Festivas</a>
                     <a class="footerLink FilterOptions" data-target="5"
-                        style="color: #4a4a4a !important;">Pequenos-almoços</a>
-                    <a class="footerLink FilterOptions" data-target="6" >Pratos
+                        style="--color: #4a4a4a">Pequenos-almoços</a>
+                    <a class="footerLink FilterOptions" data-target="6" style="--color: #4a4a4a">Pratos
                         Principais</a>
-                    <a class="footerLink FilterOptions" data-target="7" >Sem adição
+                    <a class="footerLink FilterOptions" data-target="7" style="--color: #4a4a4a">Sem adição
                         açúcar</a>
-                    <a class="footerLink FilterOptions" data-target="bolos" >Sobremesas e
+                    <a class="footerLink FilterOptions" data-target="bolos" style="--color: #4a4a4a">Sobremesas e
                         Bolos</a>
-                    <a class="footerLink FilterOptions" data-target="9" >Sopas e
+                    <a class="footerLink FilterOptions" data-target="9" style="--color: #4a4a4a">Sopas e
                         Cremes</a>
-                    <a class="footerLink FilterOptions" data-target="10" >Vegan</a>
+                    <a class="footerLink FilterOptions" data-target="10" style="--color: #4a4a4a">Vegan</a>
                 </div>
             </div>
-            <div  class="col-12 col-lg-9 ">
+            <div class="col-12 col-lg-9 ">
                 <div class="row FilterDiv">
-                    <div  data-id="Vegan Snacks" class="Filter col-md-4 col-12">
+                    <div data-id="Vegan Snacks" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pasteis-de-arroz-grao-e-curcuma.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -604,7 +595,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Bebidas" class="Filter col-md-4 col-12">
+                    <div data-id="Bebidas" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/triplo-de-morango-creme-e-granola.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -620,7 +611,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="bolos" class="Filter col-md-4 col-12">
+                    <div data-id="bolos" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pao-de-espelta.jpg" alt="Card image cap"
                                 style="border-radius: 2rem;">
@@ -636,7 +627,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Vegan Snacks" class="Filter col-md-4 col-12">
+                    <div data-id="Vegan Snacks" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pasteis-de-arroz-grao-e-curcuma.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -650,7 +641,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Bebidas" class="Filter col-md-4 col-12">
+                    <div data-id="Bebidas" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/triplo-de-morango-creme-e-granola.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -666,7 +657,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="bolos" class="Filter col-md-4 col-12">
+                    <div data-id="bolos" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pao-de-espelta.jpg" alt="Card image cap"
                                 style="border-radius: 2rem;">
@@ -682,7 +673,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Vegan Snacks" class="Filter col-md-4 col-12">
+                    <div data-id="Vegan Snacks" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pasteis-de-arroz-grao-e-curcuma.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -696,7 +687,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Bebidas" class="Filter col-md-4 col-12">
+                    <div data-id="Bebidas" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/triplo-de-morango-creme-e-granola.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -712,7 +703,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="bolos" class="Filter col-md-4 col-12">
+                    <div data-id="bolos" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pao-de-espelta.jpg" alt="Card image cap"
                                 style="border-radius: 2rem;">
@@ -728,7 +719,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Vegan Snacks" class="Filter col-md-4 col-12">
+                    <div data-id="Vegan Snacks" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pasteis-de-arroz-grao-e-curcuma.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -742,7 +733,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="Bebidas" class="Filter col-md-4 col-12">
+                    <div data-id="Bebidas" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/triplo-de-morango-creme-e-granola.jpg"
                                 alt="Card image cap" style="border-radius: 2rem;">
@@ -758,7 +749,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  data-id="bolos" class="Filter col-md-4 col-12">
+                    <div data-id="bolos" class="Filter col-md-4 col-12">
                         <div class="card" onclick="window.location.href='./Recipe.html'" style="border-radius: 2rem;">
                             <img class="card-img-top" src="imgs/pao-de-espelta.jpg" alt="Card image cap"
                                 style="border-radius: 2rem;">

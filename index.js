@@ -93,6 +93,16 @@ $('.Banner').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
+  customPaging: function (slider, i) {
+    // this example would render "tabs" with titles
+    return '<div class="dot"></div>';
+  },  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        dots: true
+      }
+    }]
 });
 
 $('.Banner').on('beforeChange', function (event, slick, currentSlide, nextSlide) {

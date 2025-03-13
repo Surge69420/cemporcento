@@ -99,3 +99,8 @@
         top: -40%;
     }
 }
+@media (max-width: 762px) {
+    .footer {
+        margin-top: 5rem;
+    }
+}

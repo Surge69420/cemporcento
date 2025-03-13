@@ -78,12 +78,18 @@
 .BannerButton.active {
     opacity: 1;
     border: 0.3vw solid white;
+    
 }
 
 .BannerSlideBtns {
     margin-bottom: 50rem;
 }
-
+@media (max-width: 1200px)
+{
+    #BannerSlideBtns {
+        display: none !important;
+    }
+}
 @media (max-width:992px) {
     .Banner {
         height: 90vw;
