@@ -18,6 +18,27 @@ document.getElementById("MenuBtn").addEventListener("click", () => {
   });
 });
 
+
+let FilterOptions = document.querySelectorAll(".FilterOptions");
+FilterOptionsArr = [...FilterOptions]
+FilterOptionsArr.forEach(element => {
+  let data = element.getAttribute("data-target");
+  element.addEventListener("click", () => {
+    FilterList = document.querySelectorAll(".FilterDiv");
+    FilterList = [...FilterList];
+    FilterList.forEach(e => {
+      if (e.getAttribute("data-id") === data) {
+        e.classList.remove("d-none");
+      } else {
+        e.classList.add("d-none");
+      }
+    })
+  })
+  
+})
+
+
+
 let displayTogglers = document.querySelectorAll(".DisplayToggler");
 let displayTogglersarr = [...displayTogglers];
 displayTogglersarr.forEach(element => {
@@ -87,7 +108,7 @@ $('.multiple').slick({
         infinite: true,
         dots: true
       }
-    },{
+    }, {
       breakpoint: 2000,
       settings: {
         slidesToShow: 5,
@@ -157,7 +178,7 @@ $('.GridSlider').slick({
         infinite: true,
         dots: true
       }
-    },{
+    }, {
       breakpoint: 2000,
       settings: {
         slidesToShow: 5,
@@ -231,7 +252,7 @@ $('.cemPorcentoSlider').slick({
         infinite: true,
         dots: true
       }
-    },{
+    }, {
       breakpoint: 2000,
       settings: {
         slidesToShow: 5,
