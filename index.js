@@ -1,32 +1,46 @@
 let topbar = document.querySelector("nav");
-if (window.location.pathname !== "/index.html") { topbar.classList.contains("Scrolled") ? null : topbar.classList.add("Scrolled"); }
+if (window.location.pathname !== "/index.html") {
+  if (!topbar.classList.contains("Scrolled")) {
+    topbar.classList.add("Scrolled");
+  }
+}
+
 document.getElementById("MenuBtn").addEventListener("click", () => {
   document.getElementById("MenuBar").classList.toggle("active");
-  let MenuBtn = document.getElementById
-    ("MenuBtn");
-  MenuBtn.textContent = MenuBtn.textContent.trim() === "sort" ? "close" : "sort";
-  MenuBtn.classList.toggle("active");
+  let menuBtn = document.getElementById("MenuBtn");
+  menuBtn.textContent = menuBtn.textContent.trim() === "sort" ? "close" : "sort";
+  menuBtn.classList.toggle("active");
   let displayTogglers = document.querySelectorAll(".DisplayToggler");
-  let displayTogglersarr = [...displayTogglers];
-  displayTogglersarr.forEach(element => {
+  let displayTogglersArr = [...displayTogglers];
+  displayTogglersArr.forEach(element => {
     let data = element.getAttribute("data-target");
-    togglerList = document.querySelectorAll(".Toggleable");
-    togglerArr = [...togglerList];
-    togglerArr.forEach(e => {
+    let togglerList = document.querySelectorAll(".Toggleable");
+    let togglerArray = [...togglerList];
+    togglerArray.forEach(e => {
       e.classList.remove("active");
     })
   });
-});
+  });
 
 
 let FilterOptions = document.querySelectorAll(".FilterOptions");
-FilterOptionsArr = [...FilterOptions]
+let FilterOptionsArr = [...FilterOptions]
 FilterOptionsArr.forEach(element => {
   let data = element.getAttribute("data-target");
   element.addEventListener("click", () => {
-    FilterList = document.querySelectorAll(".FilterDiv");
-    FilterList = [...FilterList];
-    FilterList.forEach(e => {
+
+    FilterOptionsArr.forEach(e => {
+      if(e.getAttribute("data-target") === element.getAttribute("data-target"))
+      {
+        e.classList.add("active");
+      }
+      else{
+        e.classList.remove("active");
+      }
+    })
+    let filterList = document.querySelectorAll(".FilterDiv");
+    filterList = [...filterList];
+    filterList.forEach(e => {
       if (e.getAttribute("data-id") === data) {
         e.classList.remove("d-none");
       } else {
@@ -34,19 +48,18 @@ FilterOptionsArr.forEach(element => {
       }
     })
   })
-  
 })
 
 
 
-let displayTogglers = document.querySelectorAll(".DisplayToggler");
-let displayTogglersarr = [...displayTogglers];
-displayTogglersarr.forEach(element => {
+let displayTogglersNew = document.querySelectorAll(".DisplayToggler");
+let displayTogglersArrNew = [...displayTogglersNew];
+displayTogglersArrNew.forEach(element => {
   let data = element.getAttribute("data-target");
   element.addEventListener("click", () => {
-    togglerList = document.querySelectorAll(".Toggleable");
-    togglerArr = [...togglerList];
-    togglerArr.forEach(e => {
+    let togglerList = document.querySelectorAll(".Toggleable");
+    let togglerArray = [...togglerList];
+    togglerArray.forEach(e => {
       if (e.getAttribute("data-id") === data) {
         e.classList.toggle("active");
       } else {
@@ -56,10 +69,10 @@ displayTogglersarr.forEach(element => {
   })
 });
 
-
 window.onscroll = function () {
-  let topbar = document.querySelector("nav");
-  if (window.location.pathname !== "/index.html") { topbar.classList.contains("Scrolled") ? null : topbar.classList.add("Scrolled"); return; }
+  if (window.location.pathname !== "/index.html") {
+    return;
+  }
   if (window.scrollY > 50) {
     topbar.classList.add("Scrolled");
   } else {
